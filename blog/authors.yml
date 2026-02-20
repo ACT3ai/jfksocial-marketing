@@ -1,0 +1,8 @@
+jfksocial:
+  name: JFKSocial Team
+  title: Core Team
+  url: https://jfksocial.com
+  image_url: https://jfksocial.com/static/img/logo.svg
+  page: true
+  socials:
+    x: jfksocial

@@ -1,0 +1,19 @@
+nostr:
+  label: Nostr
+  permalink: /nostr
+  description: Posts about the Nostr protocol
+
+jfksocial:
+  label: JFKSocial
+  permalink: /jfksocial
+  description: JFKSocial product updates and announcements
+
+decentralization:
+  label: Decentralization
+  permalink: /decentralization
+  description: Posts about decentralized technology
+
+release:
+  label: Release
+  permalink: /release
+  description: Release notes and version updates
