@@ -132,7 +132,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} JFK Social. Built on Nostr.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ACT3 AI, Inc.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -22,6 +22,59 @@ function VideoIcon() {
   );
 }
 
+function InfluencersSection() {
+  return (
+    <section className={styles.influencersSection}>
+      <div className={styles.splitGrid}>
+        <div className={styles.splitVideo}>
+          <div className={styles.videoFrame}>
+            <iframe
+              src="https://www.youtube.com/embed/jNQXAC9IVRw"
+              title="JFK Social — For Influencers"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </div>
+        <div className={styles.splitCopy}>
+          <Heading as="h2" className={styles.sectionHeadline}>
+            Social network for influencers.
+          </Heading>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ForkSection() {
+  return (
+    <section className={styles.forkSection}>
+      <div className={styles.splitGrid}>
+        <div className={styles.splitCopy}>
+          <Heading as="h2" className={styles.sectionHeadline}>
+            Our Open Source.
+          </Heading>
+          <p className={styles.sectionSubtext}>
+            Run your own social network.
+          </p>
+        </div>
+        <div className={styles.splitVideo}>
+          <div className={styles.videoFrame}>
+            <iframe
+              src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+              title="JFK Social — Your Social Network"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function PitchSection() {
   return (
     <section className={styles.pitchSection}>
@@ -112,6 +165,8 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <main>
         <PitchSection />
+        <InfluencersSection />
+        <ForkSection />
         <HomepageFeatures />
       </main>
     </Layout>
