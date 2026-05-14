@@ -81,7 +81,9 @@ function PitchSection() {
       <div className={styles.pitchGrid}>
         <div className={styles.pitchCopy}>
           <Heading as="h2" className={styles.pitchHeadline}>
-            Social network for citizens that want free speech.
+            Social network for citizens
+            <br />
+            that want free speech
           </Heading>
         </div>
         <div className={styles.pitchActions}>
