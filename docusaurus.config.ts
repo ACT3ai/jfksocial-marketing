@@ -19,6 +19,8 @@ const config: Config = {
 
   onBrokenLinks: "throw",
 
+  staticDirectories: ["site/static"],
+
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -29,10 +31,12 @@ const config: Config = {
       "classic",
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
+          path: "site/docs",
+          sidebarPath: "./internal/sidebars.ts",
           editUrl: "https://github.com/ACT3ai/jfksocial-marketing/tree/main/",
         },
         blog: {
+          path: "site/blog",
           showReadingTime: true,
           feedOptions: {
             type: ["rss", "atom"],
@@ -43,8 +47,11 @@ const config: Config = {
           onInlineAuthors: "warn",
           onUntruncatedBlogPosts: "warn",
         },
+        pages: {
+          path: "site/pages",
+        },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: "./internal/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
