@@ -1,0 +1,387 @@
+---
+title: JFK Social Consumer Privacy Policy
+description: How ACT 3 AI, Inc. collects, uses, shares, and protects personal information about consumers who use jfksocial.com and related services.
+---
+
+# JFK Social Consumer Privacy Policy
+
+**Effective Date:** May 12, 2026
+**Last Updated:** May 12, 2026
+
+This Consumer Privacy Policy (this "**Policy**") describes how ACT 3 AI, Inc., a Delaware corporation ("**JFK Social**," "**we**," "**us**," or "**our**"), collects, uses, shares, and protects personal information about Consumers who use the websites, applications, application programming interfaces, and other online services we operate at jfksocial.com and related properties (collectively, the "**Services**"). This Policy is incorporated into and governed by the Consumer Terms of Service located at [`/consumer/license`](/consumer/license). Capitalized terms used but not defined here have the meanings given to them in the Consumer Terms of Service.
+
+This Policy applies only to **Consumers**. If you are a rev-shared influencer or a fork operator, see the Related Documents section at the end of this Policy.
+
+---
+
+## At a Glance
+
+Read this Policy in full — this Section is a non-binding summary, not a substitute. The numbered Sections below control if there is any conflict. Six points matter most:
+
+1. **Nostr is public by default.** Posts you sign and publish, the list of people you follow, your handle-verification record, and your Zap history are public Nostr events. We cannot make a public Nostr event private after you publish it. See Section 2.
+2. **Your key is yours. You can take it elsewhere.** We do not custody your Nostr private key as a recoverable secret. Your identity, follow graph, and post history are portable to any Nostr-compatible service. See Sections 2 and the Consumer Terms of Service, Section 8.
+3. **We do not sell your data.** We do not sell personal information for money and we do not share it for cross-context behavioral advertising without your separate opt-in consent. See Sections 9 and 12.
+4. **We do not license your Content to third-party AI training.** We use Content to run our own ranking, moderation, and AI Ratings models. Licensing Content to a third party for AI model training requires your separate opt-in. See Section 6.
+5. **Encrypted direct messages stay encrypted.** We do not have plaintext access to your NIP-04 / NIP-44 direct messages and we do not run AI models over them without your opt-in. See Sections 2 and 6.
+6. **You have rights — and a working way to exercise them.** Access, correction, deletion, portability, opt-out of sale/sharing, and (for California) limit on sensitive personal information. Submit requests in-product, by email, or through our web form. See Section 11.
+
+---
+
+## Table of Contents
+
+1. Who This Policy Applies To
+2. Nostr Identity, Public-by-Default Events, and What Leaves Our Control
+3. Relays, Media Servers, and Cross-Network Federation
+4. Categories of Personal Information We Collect
+5. How We Use Personal Information
+6. AI and Machine-Learning Use of Your Content
+7. Content Moderation, Trust and Safety, CSAM Reporting
+8. Premium Plan Billing Data
+9. How We Share Personal Information
+10. Retention of Personal Information
+11. Your Privacy Rights and How to Exercise Them
+12. California Residents (CCPA / CPRA)
+13. Other U.S. State Privacy Rights (Virginia, Colorado, Connecticut, Utah, and Others)
+14. Children Under 13 (COPPA) and Minors 13 to 17
+15. Data Security
+16. International Users and Cross-Border Transfers
+17. Cookies and Similar Technologies
+18. Log Files and Server Telemetry
+19. Changes to This Policy
+20. Contact Us About Privacy
+21. Related Documents
+
+---
+
+## 1. Who This Policy Applies To
+
+This Policy applies to natural persons who use the consumer-facing Services — viewing, posting, following, messaging, subscribing, or otherwise interacting with content on jfksocial.com and our mobile clients. It does not cover (a) rev-shared influencers in their capacity as influencers, (b) fork operators in their capacity as operators, or (c) the end users of any third-party fork that is operated by someone other than JFK Social. Those categories are addressed in separate documents linked at the end of this Policy.
+
+---
+
+## 2. Nostr Identity, Public-by-Default Events, and What Leaves Our Control
+
+This is the section a careful reader most needs to understand before posting on JFK Social. Nostr is a public, cryptographic, federated protocol. Its data model is different from a closed social network and the privacy consequences are different too.
+
+(a) **Your Nostr public key is a persistent public identifier.** When you post, every event you sign is permanently associated with your public key. Anyone who sees one of your posts on any Nostr Relay sees that public key. A public key on Nostr functions like a permanent username that no one can take away from you — and that you cannot take back from anyone else.
+
+(b) **Your private key is a credential we do not custody as a recoverable secret.** We may help you generate a key, encrypt it locally, and back it up to a service you control; we do not store an unencrypted copy from which we can sign on your behalf. If your private key is lost or stolen, we cannot restore your Account in the way a typical "forgot password" flow restores a centralized Account.
+
+(c) **Posts you publish are public-by-default and propagate beyond us.** A signed Nostr event you publish to any Relay can be copied to other Relays, indexed by third-party search engines, cached by client applications, and archived by anyone. Even if you delete a post from Relays we operate, copies may persist on Relays and clients we do not operate. **Treat every public post as if it will exist forever.**
+
+(d) **"Delete" is a request, not a guarantee.** A NIP-09 deletion event tells Relays you want a prior event removed. Relays we operate will honor the request and stop serving the deleted event. Relays we do not operate may or may not honor it.
+
+(e) **Direct messages.** Encrypted direct messages (under NIP-04 or NIP-44) are encrypted between sender and recipient. We do not have access to the plaintext of those messages. Metadata about the message (sender public key, recipient public key, timestamp, approximate size) is still observable on the Relays that transport it. Do not use direct messages for content that requires absolute confidentiality.
+
+(f) **What different NIPs propagate publicly.** Several NIPs we support cause specific data to become public Nostr events that we cannot recall once published. You should understand each before posting:
+
+  * **NIP-01 events** (notes, replies, reposts): the event content, your public key, and the signed timestamp are public.
+  * **NIP-02 contact lists**: the set of public keys you follow is published as a signed event and is therefore public. Your follow graph is not private.
+  * **NIP-05 verification**: if you bind a DNS-based identifier to your public key, the DNS-hosted JSON file that proves the binding is public by design.
+  * **NIP-09 deletion requests**: a deletion request itself is a public Nostr event. The fact that you asked to delete a specific event is observable, even on Relays that honor the request.
+  * **NIP-19 entities** (`npub`, `note`, `nevent`): these are public encodings of public-key and event identifiers used in URLs and shares.
+  * **NIP-23 long-form posts**: published as ordinary public events on the Nostr network.
+  * **NIP-57 Zaps**: Zap-request and Zap-receipt events are public Nostr events. The fact, amount, and recipient of a Zap are typically public on Nostr even though the underlying Lightning payment is not on Nostr.
+  * **NIP-65 relay lists**: if you publish a relay list, the set of Relays you read from and write to is public.
+  * **NIP-94 file metadata**: file URLs, file hashes, dimensions, and mime types are public.
+
+(g) **Cross-jurisdiction reach.** Because Relays exist in many countries, your data may be received and stored in jurisdictions whose laws differ from your own. We disclose this transfer here and you accept it by using the Services.
+
+---
+
+## 3. Relays, Media Servers, and Cross-Network Federation
+
+(a) **Relays we operate.** We operate one or more first-party Nostr Relays. Data on those Relays is governed by this Policy.
+
+(b) **Third-party Relays.** When you connect to a third-party Relay (either directly or because our clients fan out events to multiple Relays for redundancy and reach), the operator of that Relay is an independent data controller of any data it receives. We have no contractual control over the data-handling practices of third-party Relays, and we make no representation about them.
+
+(c) **Media Servers.** Photos, audio, and video that you upload are stored on a Media Server. The Media Server may be one we operate or a third-party Media Server (for example, a Blossom-compatible server) you have configured. Media uploaded to a server we operate is governed by this Policy. Media uploaded to a third-party server is governed by that server's policy.
+
+(d) **Federation with Bluesky, ActivityPub / Mastodon, and Threads.** When you enable cross-posting to or reading from a third-party social network, content you publish — and identifiers tied to that content — leave our systems and enter the third-party network, where they are subject to that network's own privacy policy.
+
+(e) **Zaps and the Lightning Network.** Sending or receiving a Zap exposes information to the Bitcoin Lightning Network and to the wallet provider you use. We do not see, store, or settle Lightning payments. We may see public Zap-receipt events that appear on the Nostr network.
+
+---
+
+## 4. Categories of Personal Information We Collect
+
+For each Consumer, we collect, or may collect, the categories of personal information listed below. The full set of CCPA / CPRA category labels are noted in parentheses where applicable.
+
+(a) **Identifiers.** Email address, phone number, IP address, device identifiers, Account identifier, and the Nostr public key associated with your Account. (CCPA Category A.)
+
+(b) **Customer records.** Name (if provided), billing address (for Premium Plan subscribers), and similar information protected by Cal. Civ. Code § 1798.80(e). (CCPA Category B.)
+
+(c) **Commercial information.** Premium Plan purchase history, subscription tier, promotional code usage, and chargeback or refund records. (CCPA Category D.)
+
+(d) **Internet or network activity information.** Browsing and interaction information within the Services — pages viewed, posts read, posts created, follows, likes, reposts, searches, click-through events, time and duration of sessions, and approximate referrer information. (CCPA Category F.)
+
+(e) **Geolocation data.** Approximate geographic location derived from IP address. We do not collect precise GPS location unless you explicitly grant the relevant permission in our mobile client and we will not associate precise location with public posts unless you tell us to. (CCPA Category G.)
+
+(f) **Content and inferences.** Posts you publish, drafts you save, direct-message metadata, and inferences we draw from your behavior (for example, topic preferences used to rank the feed). Inferences are not sold to third parties. (CCPA Categories K and L.)
+
+(g) **Sensitive personal information.** We do not solicit sensitive personal information as defined under California law. To the extent we receive sensitive personal information voluntarily disclosed by you in a post, we treat it as public Content that you chose to publish. (CCPA "Sensitive Personal Information" category.)
+
+(h) **Audio and visual information.** Profile photo and any media you upload as part of your Content. (CCPA Category I.)
+
+(i) **Professional and education information.** Only if you choose to add it to your profile. (CCPA Categories H and J.)
+
+(j) **Government identifiers.** We do not request a Social Security number or government-issued ID from Consumers. (We may request a W-9 or W-8 from influencers under the separate Rev-Shared Influencer agreement; that data is not covered by this Policy.)
+
+(k) **Verified-Account documentation.** If you elect to upgrade to a Verified Account, we may collect documents and signals you submit to support verification (for example, a NIP-05 identifier on a domain you control, a public organizational reference, a notarized declaration, or, for higher tiers, a government-issued identity document). Identity-document images that we do not need to retain are destroyed promptly after verification; the fact and tier of verification are retained while the Account exists.
+
+(l) **Community-note submissions.** If you submit a community note that adds context to another Consumer's Content, we associate the note with your Account identifier. The text of the note may be displayed publicly alongside the Content, but your underlying Account identifier is not displayed publicly except in the form of the public Nostr public key associated with the submission.
+
+(m) **AI Rating records.** AI Ratings that we compute about you or your Content are stored as records associated with the relevant event or Account. AI Ratings are inferences within the meaning of the CCPA (Category L) and are not sold to third parties. (CCPA Categories K and L.)
+
+(n) **Sensitive-media interactions.** Whether you have opted in to view sensitive Content, and any per-Account adjustments to default sensitive-media flagging behavior, are stored as Account settings.
+
+---
+
+## 5. How We Use Personal Information
+
+We use personal information for the purposes below:
+
+(a) **Provide the Services.** Sign you in, propagate your events to Relays, render your feed, deliver direct messages, store uploaded media, and run the Premium Plan you purchased.
+
+(b) **Secure and protect the Services.** Detect, prevent, and respond to fraud, abuse, automated attacks, credential-stuffing, spam, and unlawful conduct.
+
+(c) **Moderate Content and enforce our rules.** Detect CSAM, unlawful threats, fraud, and other Content that violates the Consumer Terms of Service. This includes use of automated classifiers, human reviewers, and reports submitted by users.
+
+(d) **Rank and personalize.** Order the feed, suggest accounts to follow, and rank search results, using internal models trained on aggregate Consumer behavior. You can adjust personalization through Account settings.
+
+(e) **Communicate with you.** Send transactional notices (sign-in alerts, billing receipts, security alerts), respond to support requests, and — only if you opt in — send marketing communications.
+
+(f) **Bill and account for Premium Plans.** Process payments, prevent payment fraud, calculate sales/use tax, and meet financial-reporting obligations.
+
+(g) **Comply with law.** Respond to subpoenas, court orders, and other valid legal process; report CSAM to NCMEC; preserve evidence under a legal hold; and meet regulatory obligations.
+
+(h) **Improve the Services.** Measure feature usage, debug, and develop new features. Where this involves any analysis of your Content for AI / machine-learning purposes, Section 6 applies.
+
+(i) **Other lawful purposes.** Any other purpose disclosed to you at the time of collection or for which we obtain your consent.
+
+---
+
+## 6. AI and Machine-Learning Use of Your Content
+
+(a) **Internal models that run the Services.** We use Content that Consumers publish — together with associated public-by-default metadata — to train and operate the internal machine-learning models that run the Services. Examples include feed ranking, search relevance, abuse-and-CSAM classifiers, language identification, automatic content labels (for example, AI-generated-content labels), spam detection, and trust scoring. This use is necessary to operate the Services and is covered by the license you grant in Section 9(c) of the Consumer Terms of Service.
+
+(b) **Third-party AI models.** We do **not** sell or license your Content to third parties for use as training data for their large language models or other AI systems without your separate, opt-in consent. We will not infer such consent from the mere fact that you posted publicly on Nostr. If we ever offer a feature that licenses your Content to a third party for training, that feature will be opt-in and will be described in your privacy controls.
+
+(c) **AI-assisted features that read your private content.** Some Premium features may operate on your direct messages or drafts (for example, an AI summary of your inbox). Those features are off by default. We will not run an AI model over your encrypted direct messages without your opt-in.
+
+(d) **What we do not do.** We do not sell biometric identifiers. We do not infer sensitive personal information (for example, sexual orientation, health, religious belief, immigration status) for the purpose of advertising to those inferences.
+
+---
+
+## 7. Content Moderation, Trust and Safety, CSAM Reporting
+
+(a) **Automated and human review.** Content posted on Relays we operate may be scanned by automated classifiers — including hash-matching tools for CSAM (for example, PhotoDNA), perceptual classifiers (for example, Thorn Safer), and our internal models — and may be reviewed by trust-and-safety staff acting on reports.
+
+(b) **CSAM reports.** When we identify suspected CSAM we report it to NCMEC and to law enforcement as required by 18 U.S.C. § 2258A. We retain CSAM-related evidence under a strict legal hold and disclose it only to authorized investigators.
+
+(c) **User-submitted reports.** A report you submit, including your Account identifier and the text of the report, is shared with our trust-and-safety team and may be shared with the Consumer being reported in the course of any appeal.
+
+(d) **No moderation of plaintext direct messages.** We do not scan the plaintext of encrypted direct messages. We may rely on cleartext metadata (sender, recipient, timestamp) and on the receiving user's reports to act against abuse conducted over direct message.
+
+(e) **AI Ratings.** AI Ratings produced about your Content are stored as records associated with the event. Some AI Ratings are displayed publicly alongside the Content (for example, a sensitive-media classification or a hate-index value), some are used only internally for ranking and safety enforcement, and some are used as inputs to community-note display thresholds. You may appeal an AI Rating through the in-product appeals flow.
+
+(f) **Community-note submissions.** When you submit a community note we associate it with your Account identifier and may share aggregated quality signals about your submissions with the community-notes algorithm. Persistent abuse of the community-note system may result in revocation of your eligibility to submit or rate notes and may be referenced in trust-and-safety enforcement under the Consumer Terms of Service.
+
+(g) **Verified-Account documents.** Documents you submit for verification are reviewed by our verification staff and, where required, by a contracted identity-verification provider acting as a service provider on our behalf. Verification documents that we are not required to retain are destroyed promptly after the verification decision; the fact and tier of verification are retained while the Account exists.
+
+---
+
+## 8. Premium Plan Billing Data
+
+(a) **Payment processor.** Premium Plan payments are processed by a third-party payment processor (currently Stripe, Inc.). You provide your payment-card or other payment-method details directly to the processor. We receive a payment token, the last four digits of the card, the card brand, an approximate billing region, and the success/failure of each charge.
+
+(b) **Subscription metadata.** We retain the fact and history of your subscription, the plan tier ($19.99 or $39.99), start date, renewal dates, cancellation date, refund history, and chargeback history.
+
+(c) **Tax records.** We retain transaction-level records sufficient to satisfy U.S. sales/use tax and similar tax-reporting obligations for the retention period stated in Section 10.
+
+(d) **No sale of payment data.** We do not sell, rent, or share payment-card data, billing addresses, or transaction histories for cross-context behavioral advertising.
+
+---
+
+## 9. How We Share Personal Information
+
+We share personal information with the categories of recipients below, and only for the purposes stated.
+
+(a) **Service providers.** Cloud infrastructure (compute, storage, CDN), payment processor, email-delivery provider, customer-support tooling, error-monitoring and analytics providers, fraud-and-abuse vendors, and content-moderation vendors. Service providers act on our behalf under contract and are not permitted to use personal information for their own purposes.
+
+(b) **The public Nostr network.** Every signed event you publish — including your public key, post body, attachments, and timestamps — is transmitted to one or more Relays. The Relays you publish to, and anyone reading those Relays, will see that data. This is the nature of Nostr; we cannot send a public Nostr event without disclosing it.
+
+(c) **Third-party social networks.** If you enable cross-posting to Bluesky, ActivityPub / Mastodon, Threads, or another network, we transmit your post and the identifiers needed to deliver it to that network.
+
+(d) **Other Consumers.** Public profile fields, public posts, follows, likes, and reposts are visible to other Consumers and to the public.
+
+(e) **Law enforcement and legal process.** We disclose personal information in response to valid legal process, to comply with Applicable Law, to enforce the Consumer Terms of Service, to protect the rights, property, or safety of JFK Social, our Consumers, or the public, and to NCMEC for CSAM reports.
+
+(f) **Corporate transactions.** In a merger, acquisition, reorganization, financing, or sale of substantially all assets, personal information may be transferred subject to standard confidentiality protections and to this Policy (or a successor policy that is at least as protective).
+
+(g) **With your direction or consent.** Where you direct or consent to the sharing — for example, by authorizing a third-party Nostr client to use your Account, or by enabling a third-party app over our API.
+
+We do **not** sell personal information for money. We do not share personal information for cross-context behavioral advertising without your separate opt-in consent. (See Section 12 for California-specific language on "sale" and "sharing.")
+
+---
+
+## 10. Retention of Personal Information
+
+We retain personal information only as long as needed for the purpose for which it was collected, after which it is deleted or de-identified. Specific retention rules:
+
+* **Account profile and post history on first-party Relays.** Retained while your Account is active. After Account deletion, profile data is removed from first-party Relays within thirty (30) days, subject to backups that age out within an additional ninety (90) days. Public Nostr events you published cannot be deleted from third-party Relays under our control; see Section 2.
+* **Direct-message metadata on first-party Relays.** Retained for ninety (90) days from receipt unless the recipient retains the event longer.
+* **Server logs and operational telemetry.** Retained for thirteen (13) months from collection.
+* **Billing and tax records.** Retained for seven (7) years from the date of the transaction to satisfy tax-record-keeping requirements under 26 U.S.C. § 6001 and analogous state law.
+* **Trust-and-safety and legal-hold records.** Retained for the period required by the underlying legal obligation or investigation, which may exceed the periods above. CSAM-related evidence is retained as required by 18 U.S.C. § 2258A.
+* **Marketing-consent records.** Retained while consent is valid plus three (3) years after withdrawal.
+
+When the applicable period ends, we delete the data or de-identify it so it can no longer be associated with you.
+
+---
+
+## 11. Your Privacy Rights and How to Exercise Them
+
+Regardless of where you live, every Consumer has at least the following rights:
+
+(a) **Access** — request a copy of the personal information we have about you.
+(b) **Correction** — request that we correct inaccurate personal information.
+(c) **Deletion** — request that we delete personal information we hold about you.
+(d) **Portability** — request your data in a structured, machine-readable format.
+(e) **Withdraw consent** — withdraw any consent you previously gave (for example, marketing emails or third-party AI-training opt-in).
+(f) **Object / opt out** — opt out of certain processing as described in Section 12 and Section 13.
+(g) **Lodge a complaint** — contact us directly or, where available, file a complaint with the regulator in your jurisdiction.
+
+**How to exercise these rights.** Submit a request in any of these ways:
+
+* In-product: Settings → Privacy → Privacy Requests.
+* Email: privacy@jfksocial.com (with subject line "Privacy Request").
+* Web form: jfksocial.com/privacy/request.
+
+We will verify your identity using information already associated with your Account. We do not require you to create an Account to make a request, but unauthenticated requests may require additional verification. We will respond within forty-five (45) days, extendable once for another forty-five (45) days if reasonably necessary, and we will tell you about any extension. We will not discriminate against you for exercising a privacy right.
+
+**Portability export format.** When you request portability, we export the records under your Account in a structured, commonly used, machine-readable format. The default export is a ZIP archive containing JSON files (one file per data category in Section 4), plus copies of any media you uploaded and copies of the signed Nostr events you published from your Account. The JSON schemas used by the export are documented at jfksocial.com/privacy/export-schema.
+
+**Authorized agents.** A California resident may use an authorized agent to submit a request on their behalf. The agent must provide signed permission from you and we will verify the agent's authority.
+
+**Limits on rights.** Some rights are subject to limits. We may decline a deletion request, in whole or in part, where we are required or permitted to retain the information — for example, to complete a transaction, comply with law, exercise free speech, or protect rights of others. We will tell you why if we decline.
+
+---
+
+## 12. California Residents (CCPA / CPRA)
+
+If you reside in California, you have the rights described in Section 11 plus the additional rights granted by the California Consumer Privacy Act, as amended by the California Privacy Rights Act (collectively the "**CCPA**").
+
+(a) **Right to know.** You have the right to know the categories of personal information we collected about you, the categories of sources, the business or commercial purpose for collecting it, and the categories of third parties to whom we disclose it. The CCPA-categorized data we collect is listed in Section 4 and the sharing categories are listed in Section 9.
+
+(b) **Right to delete.** Subject to statutory exceptions, you may request that we delete personal information we collected from you.
+
+(c) **Right to correct.** You may request correction of inaccurate personal information.
+
+(d) **Right to data portability.** You may request a copy of your personal information in a portable, machine-readable format.
+
+(e) **Right to opt out of sale and sharing.**
+
+* **Sale.** We do **not** sell personal information for monetary consideration. We do not sell personal information of any Consumer, and we do not sell the personal information of a Consumer we have actual knowledge is under sixteen (16) years of age.
+* **Sharing (cross-context behavioral advertising).** We do not engage in "sharing" of personal information for cross-context behavioral advertising as that term is defined by the CCPA, except where you have opted in. If you have opted in and wish to opt out, you may do so at jfksocial.com/privacy/do-not-sell-or-share.
+* **Global Privacy Control.** We honor a valid Global Privacy Control (GPC) signal as an opt-out request.
+
+(f) **Right to limit use of Sensitive Personal Information.** We do not use Sensitive Personal Information for purposes beyond those listed in Cal. Civ. Code § 1798.121(a) and the related regulations. If we ever do, we will provide a "Limit the Use of My Sensitive Personal Information" link.
+
+(g) **Right to non-discrimination.** We will not deny services, charge different prices, or provide a different level of quality because you exercised a CCPA right.
+
+(h) **Notice of financial incentive.** Premium Plans are not a financial incentive within the meaning of the CCPA — they are paid subscriptions with disclosed benefits. We do not condition any privacy right on Premium Plan purchase.
+
+(i) **"Shine the Light" (Cal. Civ. Code § 1798.83).** California residents may request information about disclosures of personal information to third parties for direct-marketing purposes. We do not make those disclosures.
+
+(j) **Children under 16.** Consistent with Cal. Civ. Code § 1798.120(c), we do not sell or share for cross-context behavioral advertising the personal information of any Consumer we have actual knowledge is under the age of sixteen (16).
+
+(k) **Metrics.** We publish CCPA request-and-response metrics annually at jfksocial.com/privacy/metrics where the law requires it.
+
+---
+
+## 13. Other U.S. State Privacy Rights (Virginia, Colorado, Connecticut, Utah, and Others)
+
+If you reside in Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA), Utah (UCPA), or another U.S. state with a comprehensive consumer-privacy statute then in force, you have rights substantially similar to those described in Section 11 — access, correction (where the statute provides it), deletion, portability, and opt-out of targeted advertising, sale, and certain profiling. We do not engage in targeted advertising or sale as those terms are defined in those statutes. Appeals of any denied request may be submitted to privacy-appeals@jfksocial.com and will be reviewed by a person not involved in the original decision. We will respond to an appeal within the timeline required by the applicable statute (typically forty-five (45) to sixty (60) days). If your appeal is denied you may contact your state attorney general.
+
+---
+
+## 14. Children Under 13 (COPPA) and Minors 13 to 17
+
+(a) **Children under 13.** The Services are not directed to children under the age of thirteen (13). We do not knowingly collect personal information from a child under 13. If we learn that a child under 13 has provided personal information, we delete it and terminate the Account. If you are a parent or guardian and you believe a child under 13 has given us personal information, contact us at privacy@jfksocial.com.
+
+(b) **Minors 13 to 17.** The minimum age to use the Services is thirteen (13). Use by anyone aged 13 to 17 is permitted only with the consent of a parent or guardian as described in the Consumer Terms of Service. For Accounts we know to be held by a minor:
+
+  * Sensitive Content under Section 6 of the Consumer Terms of Service is hidden by default and cannot be opted into;
+  * Default discoverability and recommendation settings are more restrictive;
+  * Direct messages from strangers are off by default;
+  * We do not use the minor's personal information for cross-context behavioral advertising, even where the minor or a parent would otherwise be able to opt in;
+  * We do not sell or share the minor's personal information within the meaning of the CCPA.
+
+(c) **Discovery of a younger user.** If we discover that an Account known to us as belonging to a Consumer 18 or older is in fact held by a person under 18, or that an Account aged 13 to 17 is held by a person under 13, we apply the corresponding default restrictions retroactively or, in the case of an under-13 discovery, delete the Account as described in paragraph (a).
+
+---
+
+## 15. Data Security
+
+We implement administrative, technical, and physical safeguards designed to protect personal information against unauthorized access, disclosure, alteration, and destruction. These include encryption of data in transit (TLS for client connections and Relay-to-Relay synchronization where supported), encryption of payment data at the payment processor, access controls and audit logging for production systems, and a security-incident response process. **No system is perfectly secure.** We cannot guarantee absolute security; you are responsible for keeping your sign-in credentials and Nostr private key secure on your devices.
+
+In the event of a personal-information breach that triggers a notification obligation under Applicable Law, we will notify affected Consumers and regulators within the timelines required by that law. Where no specific statutory deadline applies, we will notify affected Consumers without unreasonable delay and no later than thirty (30) days after we determine that a notifiable breach occurred, unless law enforcement instructs us to delay notification to protect an active investigation.
+
+---
+
+## 16. International Users and Cross-Border Transfers
+
+JFK Social is operated from the United States. If you use the Services from outside the United States, you understand and agree that your personal information will be transferred to and processed in the United States and other jurisdictions where we and our service providers operate. The laws of those jurisdictions may differ from the laws of your jurisdiction.
+
+Because the Services interoperate with Nostr Relays located worldwide, posts you publish may be transmitted to and stored in jurisdictions outside both the United States and your own country.
+
+The Services are intended for users in the United States. We do not target the Services to residents of the European Union, EFTA states, or the United Kingdom and do not affirmatively offer them through European stores; nonetheless, where local mandatory law applies, we comply with it.
+
+---
+
+## 17. Cookies and Similar Technologies
+
+We use cookies, local storage, session storage, IndexedDB, and similar technologies to keep you signed in, remember your preferences, secure your Account, measure how the Services are used, and detect abuse. We do not use cookies to enable cross-context behavioral advertising. You can control cookies through your browser; disabling them may degrade some features.
+
+---
+
+## 18. Log Files and Server Telemetry
+
+Our servers automatically log IP addresses, request paths, user-agent strings, timestamps, response codes, and similar diagnostic data. These logs are retained for the period stated in Section 10 and are used to operate, secure, and debug the Services.
+
+---
+
+## 19. Changes to This Policy
+
+We may amend this Policy from time to time by posting a revised version on the Services and updating the "Last Updated" date at the top. Material changes will be communicated by email or in-product notification at least thirty (30) days before they take effect. Continued use of the Services after the effective date is acceptance of the change.
+
+---
+
+## 20. Contact Us About Privacy
+
+* Privacy requests: privacy@jfksocial.com
+* Privacy appeals: privacy-appeals@jfksocial.com
+* Web form: jfksocial.com/privacy/request
+* In-product: Settings → Privacy → Privacy Requests
+* Mailing address: ACT 3 AI, Inc., Attn: Privacy, at the address on record with the Delaware Secretary of State for ACT 3 AI, Inc.
+
+If you have a complaint we cannot resolve, you may contact your local data-protection authority. California residents may contact the California Privacy Protection Agency.
+
+---
+
+## 21. Related Documents
+
+JFK Social maintains three companion legal documents. This **Consumer (JFKSocial.com User)** Privacy Policy pairs with the Consumer Terms of Service. The privacy policies for the two other audiences are:
+
+* **Rev-Shared Influencers Privacy Policy** — [`/influencers/privacy`](/influencers/privacy). Applies to persons who refer paying users under the JFK Social influencer rev-share program.
+* **JFK Fork Operator Privacy Policy** — [`/fork/privacy`](/fork/privacy). Applies to operators who run their own social network using our source-available code; the operator is the data controller of its own end users.
+
+Companion license documents for the privacy policies above:
+
+* **Rev-Shared Influencers License** — [`/influencers/license`](/influencers/license).
+* **JFK Fork Operator License** — [`/fork/license`](/fork/license).
+
+The Terms of Service that pair with this Consumer Privacy Policy is:
+
+* **Consumer Terms of Service** — [`/consumer/license`](/consumer/license).

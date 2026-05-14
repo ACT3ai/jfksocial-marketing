@@ -26,6 +26,18 @@ const config: Config = {
     locales: ["en"],
   },
 
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "videos",
+        path: "site/videos",
+        routeBasePath: "videos",
+        sidebarPath: "./internal/sidebars-videos.ts",
+      },
+    ],
+  ],
+
   presets: [
     [
       "classic",
@@ -60,64 +72,67 @@ const config: Config = {
   themeConfig: {
     image: "img/jfksocial-social-card.jpg",
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: "light",
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
-      title: "JFKSocial",
+      title: "JFK Social",
       logo: {
-        alt: "JFKSocial Logo",
+        alt: "JFK Social Logo",
         src: "img/logo.svg",
       },
       items: [
+        { to: "/consumer", label: "Users (Citizens)", position: "left" },
+        { to: "/influencers", label: "Influencers", position: "left" },
+        { to: "/fork", label: "Your Social Network", position: "left" },
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          docsPluginId: "videos",
+          sidebarId: "videosSidebar",
           position: "left",
-          label: "Docs",
+          label: "Videos",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        {
+          href: "https://jfksocial.com/login",
+          label: "Log In",
+          position: "right",
+          className: "navbarLogin",
+        },
+        {
+          href: "https://jfksocial.com/signup",
+          label: "Sign Up",
+          position: "right",
+          className: "navbarSignUp",
+        },
       ],
     },
     footer: {
       style: "dark",
       links: [
         {
-          title: "Product",
+          title: "Users (Citizens)",
           items: [
-            {
-              label: "Getting Started",
-              to: "/docs/intro",
-            },
-            {
-              label: "Blog",
-              to: "/blog",
-            },
+            { label: "Terms", to: "/consumer/license" },
+            { label: "Privacy", to: "/consumer/privacy" },
           ],
         },
         {
-          title: "Community",
+          title: "Influencers",
           items: [
-            {
-              label: "Nostr",
-              href: "https://nostr.com",
-            },
+            { label: "Terms", to: "/influencers/license" },
+            { label: "Privacy", to: "/influencers/privacy" },
           ],
         },
         {
-          title: "Resources",
+          title: "Your Social Network",
           items: [
-            {
-              label: "What is Nostr?",
-              href: "https://nostr.com",
-            },
-            {
-              label: "NIPs (Nostr Implementation Possibilities)",
-              href: "https://github.com/nostr-protocol/nips",
-            },
+            { label: "Terms", to: "/fork/license" },
+            { label: "Privacy", to: "/fork/privacy" },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} JFKSocial. Built on Nostr.`,
+      copyright: `Copyright © ${new Date().getFullYear()} JFK Social. Built on Nostr.`,
     },
     prism: {
       theme: prismThemes.github,

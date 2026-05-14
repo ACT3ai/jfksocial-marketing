@@ -1,0 +1,282 @@
+---
+title: JFK Fork Operator Privacy Policy
+description: How ACT 3 AI, Inc. collects, uses, retains, shares, and protects the personal information of JFK Fork Operators (also called "JK4 Customers") in connection with the JFK Fork Operator License Agreement. Covers operator-vs-end-user data controllership, license-verification telemetry, royalty-reporting data, Reach-Symmetry audit data, and brand-registration data.
+---
+
+# JFK Fork Operator Privacy Policy
+
+Effective Date: 2026-05-14. Last Updated: 2026-05-14.
+
+This Privacy Policy describes how ACT 3 AI, Inc., a Delaware corporation ("Company," "we," "us," or "our"), processes personal information about individuals who, on behalf of an Operator under the JFK Fork Operator License Agreement (the "License"), download, register for, operate, modify, or distribute the JFK Social software stack (the "Software"). Operators are referred to informally as "JFK Fork Customers" or "JK4 Customers"; this Policy applies to those parties regardless of which informal label is used. This Policy is the companion document to the License and incorporates the License's defined terms; capitalized terms not defined here have the meanings given in the License. This Policy applies only to Company's processing of Operator-side data; the End Users of any JFK Fork are not covered by this Policy and must look to the Operator of that JFK Fork for its own privacy disclosures.
+
+## Table of Contents
+
+1. Who You Are When This Policy Applies
+2. Controllership: Why Operator — Not Company — Is the Controller of End User Data
+3. License-Verification Telemetry and Aggregate Fork Health Signals
+4. Royalty-Reporting Data and Audit Records
+5. Reach-Symmetry Audit Records and Paired-Account Testing
+6. Brand- and Trademark-Registration Data
+7. Information We Collect About Operator
+8. How We Use Operator Information
+9. How We Share Operator Information
+10. Retention
+11. Data Security
+12. International Data Transfers
+13. Your Rights as an Operator Representative
+14. Children
+15. Categories of Personal Information Collected (CCPA/CPRA Notice)
+16. Do Not Sell or Share; Sensitive PI; Targeted Advertising
+17. Cookies and Similar Technologies on Company Operator Surfaces
+18. Log Files and Diagnostic Data
+19. Changes to This Privacy Policy
+20. Contact
+21. Related Documents
+
+## 1. Who You Are When This Policy Applies
+
+1.1 You are an "Operator Representative" if you are a natural person who (a) acts on behalf of a legal entity that has accepted the License, or (b) personally accepts the License as a sole proprietor or natural-person Operator, and (c) interacts with Company's Operator-facing surfaces — including the source repository, the royalty-reporting portal, the license-verification system, the audit process, and Company's Operator support channels.
+
+1.2 You are an "End User" of a JFK Fork — and outside the scope of this Policy — if you have an account on, or otherwise interact with, a JFK Fork run by an Operator. End Users must consult that Operator's own privacy policy, which the Operator is required to publish under Section 12.2 of the License.
+
+1.3 "JFK Fork Customer" and "JK4 Customer" are informal alternative names for Operator used in Company communications. They refer to the same Operator covered by this Policy.
+
+## 2. Controllership: Why Operator — Not Company — Is the Controller of End User Data
+
+2.1 The Operator Is the End User Data Controller. When an Operator runs a JFK Fork, the Operator alone collects, stores, and processes End User personal information (account credentials, posts, follow graphs, direct messages, IP addresses, device identifiers, payment data, and similar). Company does not have a contractual relationship with those End Users, does not have access to End User content on a JFK Fork, and is not a controller, joint controller, or processor of End User data for purposes of the GDPR, the CCPA/CPRA, the VCDPA, the CPA, the CTDPA, the UCPA, or any other applicable data-protection law.
+
+2.2 Federation Does Not Create Controllership. Where a JFK Fork participates in a federated network (Nostr, ActivityPub, or cross-network adapters), content published by End Users on that JFK Fork may propagate to third-party relays and servers. Company is not the operator of, and does not control, those third-party relays or servers, and is not a controller of End User content propagated through federation.
+
+2.3 What Company Does See About End Users. Through the license-verification telemetry described in Section 3, Company may see aggregate, non-individual counts (such as "this JFK Fork reports approximately N daily active users"). Company does not, under the default Software configuration, receive individual End User identifiers, content, IP addresses, or device identifiers. Operator is responsible for ensuring its End Users are informed of, and where required have provided a lawful basis for, the limited aggregate data the Software sends to Company.
+
+2.4 If Operator Sends Company More Data Than Required. If an Operator, in connection with royalty reporting, an audit, a support ticket, an incident response, or any other interaction, transmits to Company personal information about that Operator's End Users beyond what is required, Company processes that information as a processor (and only for the purpose for which Operator submitted it), and Operator is solely responsible for the lawful basis for that transmission.
+
+## 3. License-Verification Telemetry and Aggregate Fork Health Signals
+
+3.1 What the Software Sends by Default. The Software is configured by default to transmit to Company, at intervals no more frequent than once per day, only the following:
+
+(a) Software version identifier (e.g., "v1.4.2");
+(b) self-generated installation identifier (a random UUID created at install time; not tied to any End User);
+(c) aggregate JFK Fork health metrics (uptime in hours since last restart, current Software version, deployment region at country level, approximate End User population in order-of-magnitude buckets such as "&lt;100", "100–1,000", "1,000–10,000", etc.);
+(d) an Operator-supplied billing identifier (used to associate the JFK Fork with Operator's royalty reporting); and
+(e) a license-verification token issued by Company.
+
+3.2 What the Software Does NOT Send. Under the default configuration, the Software does not transmit to Company any End User identifier, any End User account data, any End User content, any End User IP address, any End User device fingerprint, the contents of any database table, or any moderation decision made on a JFK Fork.
+
+3.3 Operator Control. Operator may disable any telemetry signal in Section 3.1 other than the license-verification token. Disabling the license-verification token is a material breach of the License under Section 13.2 of the License.
+
+3.4 Purposes. Company uses Section 3.1 data to (a) verify Operator's compliance with the License, (b) measure aggregate adoption of the Software, (c) identify and notify Operators of critical security vulnerabilities and incompatible upgrade paths, (d) detect anomalous patterns suggesting CSAM-scanner tampering or license-verification tampering under Section 10.2(d) of the License, and (e) reconcile against royalty reports.
+
+3.5 No Use for Marketing to End Users. Company does not use telemetry data to market to, advertise to, or otherwise communicate with End Users of any JFK Fork. Company has no End User identifiers to begin with.
+
+## 4. Royalty-Reporting Data and Audit Records
+
+4.1 What Operator Submits. Under Section 11 of the License, Operator submits a quarterly royalty report. The report includes Fork Revenue figures by JFK Fork, the Value Share calculation for any bundled product or service, royalty due, JFK Fork descriptions (brand, public URL, End User population), and an officer certification.
+
+4.2 What Company Receives. Company receives only the report itself. Company does not receive Operator's underlying accounting ledgers, customer lists, or unrelated business records, except (a) as Operator may voluntarily attach in support of a contested calculation, or (b) under the audit right in Section 11.4 of the License, in which case Company or an independent auditor may inspect books, records, and systems relevant to Fork Revenue and Value Share.
+
+4.3 Purposes. Company uses royalty-reporting data and audit records to (a) verify and reconcile royalty payments, (b) detect under-reporting, (c) negotiate the resolution of disputes, (d) enforce the License, (e) prepare aggregate financial and operational reporting for Company's own auditors, regulators, lenders, investors, and prospective acquirers under customary confidentiality protections, and (f) comply with Company's tax, accounting, and audit obligations.
+
+4.4 Confidentiality. Audit information is Operator's confidential information and is restricted as described in Section 11.5 of the License.
+
+4.5 Treatment as Trade Secret. Operator's royalty reports, Value Share calculations, and audit records are treated as Operator's confidential information by Company. Company will not publicly disclose individual Operator figures and will resist any third-party subpoena except as required by law.
+
+## 5. Reach-Symmetry Audit Records and Paired-Account Testing
+
+5.1 Why This Section Exists. Section 9 of the License imposes a Reach-Symmetry obligation on Operator: Operator must not give Company Users on the JFK Fork less Reach than Operator gives Operator's own End Users at the same access tier. To verify compliance, Company conducts comparative testing under Section 11.4 of the License. This Section describes the personal information Company processes in connection with that testing.
+
+5.2 What Company Processes. Reach-Symmetry audits involve three kinds of records:
+
+(a) Test-Account Activity Records — accounts (whether Company Users or non-Company-User test personas) that Company or an independent auditor operates on a JFK Fork under the terms of the JFK Fork's published rules of acceptable use, and the activity, content, and engagement records generated by those accounts;
+
+(b) Comparative Measurements — Reach measurements collected from the JFK Fork's public surfaces (e.g., counts of impressions, ranking positions, search-result positions, notification-eligibility flags) about the test accounts and about a sample of comparator accounts;
+
+(c) Operator-Side Disclosures — ranking-rule documentation, moderation-decision logs, and configuration evidence Operator produces in response to an audit request.
+
+5.3 Operator Representative Data Inside the Audit Record. Personal information about Operator Representatives is incidentally collected in audit records — typically in the form of communication metadata between Company and Operator about audit logistics, audit findings, and remediation. That data is processed under this Policy.
+
+5.4 End User Data Inside the Audit Record. To the extent comparative testing relies on a JFK Fork's public surfaces, Company may incidentally observe publicly viewable End User content (posts, profile names, public engagement). Company processes that incidentally observed content solely to compute Reach measurements relative to the test accounts, does not build End User profiles, does not retain End User identifiers beyond the audit period, and does not use any such content for marketing or advertising. Where a Company-side test account is itself operated by an existing Company User, that Company User's data is governed by the [Consumer (JFKSocial.com User) Privacy Policy](/consumer/privacy), not by this Policy.
+
+5.5 Purposes. Company uses Reach-Symmetry audit records to (a) verify Operator's compliance with Section 9 of the License, (b) document findings and demand remediation, (c) support termination or injunctive-relief actions under Section 14.3(a) or Section 19.4 of the License, and (d) prepare aggregated, non-Operator-identifying reporting about ecosystem-wide compliance.
+
+5.6 Confidentiality. Audit records are Operator's confidential information for purposes of Section 11.5 of the License and this Policy, except that Company may publish aggregated findings that do not identify Operator and may disclose findings to its auditors, regulators, investors, acquirers, and outside counsel under customary confidentiality protections.
+
+## 6. Brand- and Trademark-Registration Data
+
+6.1 If Operator publishes a JFK Fork that requires Company to evaluate a Brand-Asset complaint under Section 8 of the License, Company will collect information sufficient to investigate (the disputed name, logo, domain, screenshot evidence, Operator's contact information, and any voluntary response from Operator). Company processes this information solely to enforce its trademark rights and the License.
+
+## 7. Information We Collect About Operator
+
+7.1 We collect the following categories of information about an Operator and its Operator Representatives:
+
+(a) Account-Registration Information — legal entity name, jurisdiction of formation, registered address, primary contact name, primary contact title, primary contact email, primary contact phone, billing email, billing address. For natural-person Operators, the same fields plus full legal name and country of residence.
+
+(b) Payment-Account Information — payment-method identifier (e.g., wire-transfer bank routing details, ACH information, or stablecoin wallet address used for royalty payments), payment-processor identifiers, and tax-identification information (e.g., U.S. EIN, foreign-tax-equivalent identifier).
+
+(c) Tax-Compliance Information — W-9, W-8BEN, W-8BEN-E, or local-equivalent tax forms; and any 1099 or other tax-reporting outputs Company generates.
+
+(d) License-Verification Telemetry — as described in Section 3.
+
+(e) Royalty-Reporting Data — as described in Section 4.
+
+(f) Audit Records — as described in Sections 4 and 5.
+
+(g) Reach-Symmetry Audit Records — as described in Section 5.
+
+(h) Trademark- and Brand-Dispute Records — as described in Section 6.
+
+(i) Support and Communication Records — emails, chat logs, support tickets, video-call recordings (with notice), and notes from Company's interactions with Operator Representatives.
+
+(j) Repository-Access Information — Operator Representative's GitHub or equivalent code-hosting account identifier where required to gate source access to clickwrap acceptance of the License; build, clone, and fetch timestamps.
+
+(k) Operator-Surface Telemetry — for Operator Representatives who use Company's Operator-facing portal, royalty-reporting site, or documentation site: IP address, device and browser identifiers, pages visited, and approximate location (city-level) derived from IP.
+
+## 8. How We Use Operator Information
+
+8.1 We use Operator information to:
+
+(a) administer the License and the Operator relationship;
+(b) verify license compliance, including license-verification telemetry monitoring;
+(c) calculate, invoice (where applicable), receive, and reconcile royalties under Section 3 of the License;
+(d) conduct audits under Section 11 of the License (Royalty/Fork-Revenue) and under Sections 6.6 and 9.9 of the License (CSAM and Reach-Symmetry);
+(e) enforce Sections 6, 7, 8, 9, 10, and 12 of the License (illegal image/video content and CSAM, applicable-law compliance, brand restrictions, Reach Symmetry, prohibited uses, and Operator's End-User obligations);
+(f) provide Operator support and respond to inquiries;
+(g) notify Operator of security advisories, end-of-life schedules, Change Date events, and material amendments to the License;
+(h) comply with applicable law (tax, accounting, sanctions, anti-money-laundering, lawful-process responses);
+(i) defend Company's rights, including in litigation and arbitration; and
+(j) generate aggregate, non-identifying statistics about Operator adoption of the Software, which Company may publish.
+
+8.2 No Profiling for Targeted Advertising. We do not engage in profiling of Operators or Operator Representatives that produces legal or similarly significant effects, and we do not engage in cross-context behavioral advertising directed at Operators or their End Users.
+
+## 9. How We Share Operator Information
+
+9.1 Service Providers. We share Operator information with service providers that perform services on our behalf, under written contracts limiting use to those services and requiring appropriate confidentiality and security. Categories include cloud hosting and storage (Amazon Web Services and Google Cloud Platform), email and communication (SendGrid, Postmark), payment processing and banking (Stripe and our banking partners), tax-form generation (e.g., 1099 services), customer support tools, source-code-hosting providers (GitHub), business intelligence and accounting tools, and outside auditors and accountants.
+
+9.2 Legal and Safety. We share Operator information when we believe in good faith that disclosure is necessary to: (a) comply with applicable law, regulation, or legal process (e.g., subpoenas, court orders, search warrants); (b) enforce the License or this Policy; (c) detect, prevent, or respond to fraud, security incidents, or illegal activity; (d) cooperate with NCMEC, the Internet Watch Foundation, GIFCT, StopNCII.org, law enforcement, or trusted-flagger organizations in connection with CSAM-pipeline failures or other illegal-image/video-content-pipeline failures on a JFK Fork; or (e) protect the rights, property, or safety of Company, our personnel, our other Operators, our Company Users, or the public.
+
+9.3 Corporate Transactions. We share Operator information with potential or actual acquirers, investors, lenders, or other counterparties in connection with a proposed or actual merger, acquisition, financing, reorganization, bankruptcy, or sale of all or substantially all of Company's assets, under appropriate confidentiality protections.
+
+9.4 Trademark and IP Counterparties. In a brand dispute under Section 6, we may share relevant information with our outside trademark counsel, the U.S. Patent and Trademark Office (or its foreign equivalents), and domain-name dispute-resolution providers such as WIPO.
+
+9.5 No Sale. We do not sell Operator personal information, and we do not share Operator personal information for cross-context behavioral advertising. See Section 16.
+
+## 10. Retention
+
+10.1 We retain Operator information for the periods described below. Where a category falls into more than one bucket, the longest applicable period applies.
+
+(a) Account-Registration Information, Payment-Account Information, and License-Verification Telemetry — for the duration of the License plus seven (7) years after termination, or longer where required by tax, accounting, or audit law.
+
+(b) Royalty-Reporting Data and Audit Records — at least seven (7) years after the end of the relevant Reporting Period (mirroring the records-retention obligation imposed on Operator under Section 11.3 of the License), or longer where required by applicable law.
+
+(c) Reach-Symmetry Audit Records — at least seven (7) years after the close of the audit cycle to which they relate, except that records used in or supporting a termination, arbitration, litigation, or injunctive-relief action are retained until that matter is finally resolved plus the applicable statute of limitations.
+
+(d) Tax-Compliance Information — seven (7) years after the end of the tax year to which it relates, or longer where required by the U.S. Internal Revenue Code, state tax law, or foreign-tax-equivalent law.
+
+(e) Support and Communication Records — three (3) years after the last interaction, except records relevant to an unresolved dispute, which we retain until the dispute is resolved plus the applicable statute of limitations.
+
+(f) Trademark- and Brand-Dispute Records — for the duration of the License plus ten (10) years, given that trademark rights persist independently of license duration.
+
+(g) Operator-Surface Telemetry — at most thirteen (13) months in identifiable form, after which it is aggregated or deleted.
+
+10.2 Deletion-Request Override. Operator may request deletion of records that have passed any applicable mandatory retention period, subject to Company's right to retain records for legal-hold, dispute, or compliance purposes.
+
+## 11. Data Security
+
+11.1 We maintain administrative, technical, and physical safeguards designed to protect Operator information against unauthorized access, alteration, disclosure, and destruction. Safeguards include access controls keyed to least-privilege roles, encryption in transit (TLS 1.2 or higher) and at rest for sensitive fields, network segmentation, mandatory multi-factor authentication on Company employee accounts, secret-management for keys and credentials, regular vulnerability scanning, penetration testing on Company-operated services, third-party SOC reports for our material processors, and an incident-response program.
+
+11.2 No system is perfectly secure. If a security incident materially affecting Operator personal information occurs, Company will notify the affected Operator without undue delay, in any event in accordance with applicable law.
+
+## 12. International Data Transfers
+
+12.1 Company processes Operator information primarily in the United States. Where we transfer personal information of Operator Representatives located in the European Economic Area, the United Kingdom, or Switzerland to the United States, we rely on the EU Standard Contractual Clauses (and the UK International Data Transfer Addendum where applicable) as the transfer mechanism, supplemented by the technical and organizational measures described in Section 11. Operator Representatives may request a copy of the applicable transfer mechanism from privacy@jfksocial.com.
+
+## 13. Your Rights as an Operator Representative
+
+13.1 Depending on where you reside, you may have one or more of the following rights with respect to your personal information as an Operator Representative:
+
+(a) right of access — to confirm whether we process your personal information and obtain a copy;
+(b) right of correction — to correct inaccurate personal information;
+(c) right of deletion — to request deletion, subject to the retention limits in Section 10;
+(d) right of portability — to receive your personal information in a structured, commonly used, machine-readable format;
+(e) right to opt out of "sale" or "sharing" of personal information for cross-context behavioral advertising — see Section 16 (we do not engage in either);
+(f) right to limit use of "sensitive personal information" — see Section 16;
+(g) right to non-discrimination for exercising any of the above rights;
+(h) right to withdraw consent where processing is based on consent;
+(i) right to object to processing based on legitimate interests;
+(j) right to lodge a complaint with a supervisory authority (in the EEA / UK / Switzerland).
+
+13.2 How to Exercise. To exercise any right, email privacy@jfksocial.com from the email address on file with your Operator account, or submit a request through the form at jfksocial.com/legal/privacy-request. We will respond within the time required by applicable law (forty-five (45) days for California requests, with a single forty-five-day extension where reasonably necessary; one month for GDPR requests, with up to two additional months for complex requests). We may need to verify your identity and your authority to act on behalf of the Operator.
+
+13.3 Authorized Agents. California residents may use an authorized agent to submit a request; we may require the agent to provide proof of authorization and may verify the request directly with you.
+
+13.4 Appeals. If we deny your request in whole or in part, you may appeal by replying to our denial within thirty (30) days. We will respond to the appeal within forty-five (45) days. State-level appeals procedures (Virginia VCDPA, Colorado CPA, Connecticut CTDPA) are honored.
+
+## 14. Children
+
+14.1 The Software, the License, and the Operator-facing surfaces are not directed to children under thirteen (13). We do not knowingly accept an Operator Representative under thirteen (13). If we discover that an Operator Representative is under thirteen (13), we will close the associated account and delete the related personal information.
+
+14.2 End Users of any JFK Fork are governed by the Operator's own policies, including the Operator's compliance with the Children's Online Privacy Protection Act ("COPPA"), 15 U.S.C. § 6501 et seq., and any applicable state or foreign children's-privacy law. Operator's compliance with COPPA on its JFK Fork is Operator's responsibility under Section 7 of the License.
+
+## 15. Categories of Personal Information Collected (CCPA/CPRA Notice)
+
+15.1 In the twelve (12) months preceding the Effective Date and continuing into the future, Company collects the following CCPA/CPRA-defined categories of personal information from Operator Representatives:
+
+(a) Identifiers — name, email address, IP address, account identifiers;
+(b) Customer-Records Information — bank-account, payment-routing, and tax-form information;
+(c) Commercial Information — License execution, royalty-payment history;
+(d) Internet/Network Activity — Operator-Surface Telemetry, license-verification telemetry;
+(e) Geolocation — approximate (city- or country-level) only, derived from IP;
+(f) Professional/Employment Information — job title and employer for Operator Representatives;
+(g) Inferences — derived signals such as whether a particular JFK Fork is likely under-reporting Fork Revenue or non-compliant with Section 9 of the License (used solely for audit triage, not for advertising or external decision-making about an Operator Representative's individual rights).
+
+15.2 We disclose these categories for business purposes to the recipients listed in Section 9. We do not sell or share these categories for cross-context behavioral advertising (see Section 16).
+
+## 16. Do Not Sell or Share; Sensitive PI; Targeted Advertising
+
+16.1 No Sale. Company does not sell personal information of Operator Representatives within the meaning of the CCPA/CPRA, the VCDPA, the CPA, the CTDPA, or the UCPA.
+
+16.2 No Sharing for Cross-Context Behavioral Advertising. Company does not "share" personal information of Operator Representatives within the meaning of the CCPA/CPRA for cross-context behavioral advertising.
+
+16.3 Sensitive Personal Information. Company does not collect categories that the CCPA/CPRA classifies as "sensitive personal information" about Operator Representatives, other than government-issued tax identifiers (e.g., U.S. Social Security number used on a W-9 for a sole-proprietor Operator), which Company uses solely to comply with tax-reporting obligations and not for any purpose that would entitle the Operator Representative to a Section 1798.121 "Limit the Use" right. To the extent any such use occurs, the Operator Representative may submit a "Limit the Use" request under Section 13.
+
+16.4 California "Shine the Light." Company does not disclose Operator Representative personal information to third parties for those third parties' direct-marketing purposes within the meaning of California Civil Code § 1798.83.
+
+## 17. Cookies and Similar Technologies on Company Operator Surfaces
+
+17.1 Company uses strictly necessary cookies and similar technologies on its Operator-facing portal, royalty-reporting site, and documentation site to authenticate Operator Representatives, maintain session state, and protect against fraud. Company uses limited first-party analytics to understand usage patterns of these surfaces.
+
+17.2 Company does not use third-party advertising cookies, advertising pixels, or cross-context behavioral advertising tags on its Operator-facing surfaces.
+
+17.3 Operator Representatives may control non-essential cookies through their browser settings and through any preference center Company provides. Strictly necessary cookies cannot be disabled because the surfaces require them.
+
+## 18. Log Files and Diagnostic Data
+
+18.1 Like most online services, Company's Operator-facing surfaces and back-end systems generate log files containing IP address, request timestamp, request URL, response status, user-agent, and similar diagnostic fields. We use these logs for security, abuse prevention, debugging, and aggregate analytics. Identifiable log data is retained in line with Section 10.1(g).
+
+## 19. Changes to This Privacy Policy
+
+19.1 We may update this Privacy Policy from time to time. When we make material changes, we will update the Effective Date at the top, post the updated Policy in the Software repository and on jfksocial.com/legal, and where required by law, notify Operator Representatives by email at the email address on file. Operator's continued use of the Software, the Operator-facing surfaces, or any other Company surface after the Effective Date of an update constitutes acceptance of the updated Policy. If Operator does not accept the updated Policy, Operator's remedy is to terminate the License under Section 14.2 of the License before the Effective Date of the update.
+
+## 20. Contact
+
+20.1 Questions or requests under this Privacy Policy should be directed to:
+
+ACT 3 AI, Inc.
+Attn: Privacy — JFK Fork
+Email: privacy@jfksocial.com
+Mailing address: [Notice Address On File With Company]
+
+20.2 For EU/UK matters, our representative is identified on the privacy page at jfksocial.com/legal.
+
+## 21. Related Documents
+
+21.1 JFK Social maintains three companion legal documents. This JFK Fork Operator Privacy Policy applies to Operators (also referred to informally as "JFK Fork Customers" or "JK4 Customers") and to their Operator Representatives who interact with Company in connection with running the JFK Social software on their own infrastructure. The two complementary privacy policies are:
+
+* [Rev-Shared Influencers Privacy Policy](/influencers/privacy) — how Company processes personal information of individuals enrolled in Company's referral program (including payout data and FTC-disclosure-related communications).
+* [Consumer (JFKSocial.com User) Privacy Policy](/consumer/privacy) — how Company processes personal information of End Users of Company's hosted service at jfksocial.com.
+
+21.2 Companion license documents:
+
+* [Rev-Shared Influencers License](/influencers/license)
+* [Consumer (JFKSocial.com User) License](/consumer/license)
+* [JFK Fork Operator License Agreement](/fork/license) — the contract this Privacy Policy accompanies.

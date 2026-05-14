@@ -47,8 +47,8 @@ function PitchSection() {
             </Link>
           </div>
           <div className={styles.policyButtons}>
-            <Link to="/consumer/terms" className={styles.policyButton}>
-              Terms of Service
+            <Link to="/consumer/license" className={styles.policyButton}>
+              License
             </Link>
             <Link to="/consumer/privacy" className={styles.policyButton}>
               Privacy Policy
@@ -73,11 +73,24 @@ function HomepageHeader() {
             <li>open source.</li>
             <li>algorithm scores transparent.</li>
           </ul>
+          <div className={styles.heroCtaRow}>
+            <a
+              href="https://jfksocial.com"
+              className={styles.heroCta}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Started
+              <span aria-hidden="true" className={styles.heroCtaArrow}>
+                →
+              </span>
+            </a>
+          </div>
         </div>
         <div className={styles.heroVideo}>
           <div className={styles.videoFrame}>
             <iframe
-              src="https://www.youtube.com/embed/jNQXAC9IVRw"
+              src="https://www.youtube.com/embed/-yWQrDJ-9kk"
               title="JFK Social"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
