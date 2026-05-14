@@ -293,6 +293,18 @@
   margin: 0;
 }
 
+.forkSection .sectionHeadline,
+.forkSection .sectionSubtext {
+  text-align: right;
+}
+
+.forkSection .sectionSubtext {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--jfk-muted);
+}
+
 /* ============ Responsive ============ */
 
 @media screen and (max-width: 996px) {
@@ -356,6 +368,15 @@
 
   .sectionSubtext {
     text-align: center;
+  }
+
+  .forkSection .sectionHeadline,
+  .forkSection .sectionSubtext {
+    text-align: center;
+  }
+
+  .forkSection .sectionSubtext {
+    font-size: 2rem;
   }
 
   /* Keep video above text on mobile for both sections, regardless of source order */
