@@ -100,7 +100,7 @@ const config: Config = {
           className: "navbarLogin",
         },
         {
-          href: "https://jfksocial.com/signup",
+          href: "https://jfksocial.com/create-account",
           label: "Sign Up",
           position: "right",
           className: "navbarSignUp",

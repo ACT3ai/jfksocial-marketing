@@ -171,6 +171,18 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+a.footer__title--link {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a.footer__title--link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .footer__item {
   font-size: 0.95rem;
 }
