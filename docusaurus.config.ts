@@ -80,7 +80,7 @@ const config: Config = {
       title: "JFK Social",
       logo: {
         alt: "JFK Social Logo",
-        src: "img/logo.svg",
+        src: "img/jfk-john-80.jpg",
       },
       items: [
         { to: "/consumer", label: "Users (Citizens)", position: "left" },
