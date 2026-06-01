@@ -55,13 +55,13 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Encrypted Messaging',
-    icon: '\uD83D\uDD12',
+    title: 'Transparent Metrics for Feed Algorithm',
+    icon: '\uD83D\uDCCA',
     description: (
       <>
-        Send private, end-to-end encrypted direct messages using NIP-04.
-        Your conversations stay between you and the recipient. No data mining,
-        no ad targeting.
+        Every post is scored by an open, auditable algorithm. See exactly which
+        signals rank what you read \u2014 no hidden weights, no shadow boosts, no
+        secret demotions.
       </>
     ),
   },

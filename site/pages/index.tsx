@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "@docusaurus/Link";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/internal/components/HomepageFeatures";
+import OpenSourceBackbones from "@site/internal/components/OpenSourceBackbones";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
@@ -29,7 +30,7 @@ function InfluencersSection() {
         <div className={styles.splitVideo}>
           <div className={styles.videoFrame}>
             <iframe
-              src="https://www.youtube.com/embed/jNQXAC9IVRw"
+              src="https://www.youtube.com/embed/-yWQrDJ-9kk"
               title="JFK Social — For Influencers"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -62,7 +63,7 @@ function ForkSection() {
         <div className={styles.splitVideo}>
           <div className={styles.videoFrame}>
             <iframe
-              src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+              src="https://www.youtube.com/embed/-yWQrDJ-9kk"
               title="JFK Social — Your Social Network"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -169,6 +170,7 @@ export default function Home(): ReactNode {
         <PitchSection />
         <InfluencersSection />
         <ForkSection />
+        <OpenSourceBackbones variant="alt" />
         <HomepageFeatures />
       </main>
     </Layout>

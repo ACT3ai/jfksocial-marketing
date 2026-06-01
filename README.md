@@ -29,7 +29,7 @@ Generates static output in `build/`.
 
 | Variable   | Description                  | Default                    |
 | ---------- | ---------------------------- | -------------------------- |
-| `SITE_URL` | Production URL of the site   | `https://jfksocial.com`    |
+| `SITE_URL` | Production URL of the site   | `https://m.jfksocial.com`  |
 | `BASE_URL` | Base path the site is served under | `/`                  |
 
 ## Project Structure

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
+import OpenSourceBackbones from "@site/internal/components/OpenSourceBackbones";
 
 import styles from "./index.module.css";
 
@@ -24,7 +25,7 @@ function HeroSection() {
         <div className={styles.heroVideo}>
           <div className={styles.videoFrame}>
             <iframe
-              src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+              src="https://www.youtube.com/embed/-yWQrDJ-9kk"
               title="Your Social Network — Overview"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -184,6 +185,7 @@ export default function ForkOverview(): ReactNode {
       <main>
         <WhatsIncludedSection />
         <WhyForkSection />
+        <OpenSourceBackbones variant="alt" />
         <LaunchPathSection />
       </main>
     </Layout>
