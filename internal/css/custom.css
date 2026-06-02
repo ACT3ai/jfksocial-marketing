@@ -97,12 +97,37 @@ a:hover {
   border-bottom: 1px solid var(--jfk-border);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Make the brand logo fill the full navbar height with no vertical gap. */
+.navbar__brand {
+  height: 100%;
+  margin-right: 1rem;
+  padding: 0;
+}
+
+.navbar__logo {
+  height: 100%;
+  margin-right: 0.6rem;
+  display: flex;
+  align-items: stretch;
+}
+
+.navbar__logo img {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .navbar__title {
   font-weight: 700;
   letter-spacing: -0.01em;
   font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 .navbar__link {
