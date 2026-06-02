@@ -105,9 +105,6 @@ function HomepageHeader() {
     <header className={styles.heroBanner}>
       <div className={styles.heroGrid}>
         <div className={styles.heroContent}>
-          <p className={styles.heroEyebrow}>
-            The social network for citizens who refuse to be silenced
-          </p>
           <Heading as="h1" className={styles.heroTitle}>
             Speak freely.
             <br />
@@ -136,7 +133,7 @@ function HomepageHeader() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Browse the feed
+              Browse (while logged out)
             </a>
           </div>
           <ul className={styles.heroChecks}>
@@ -152,6 +149,9 @@ function HomepageHeader() {
           </ul>
         </div>
         <div className={styles.heroVideo}>
+          <p className={styles.heroEyebrow}>
+            The social network for citizens who refuse to be silenced
+          </p>
           <div className={styles.videoFrame}>
             <iframe
               src="https://www.youtube.com/embed/-yWQrDJ-9kk"
