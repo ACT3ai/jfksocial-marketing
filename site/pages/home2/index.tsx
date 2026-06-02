@@ -162,7 +162,7 @@ function HomepageHeader() {
             />
           </div>
           <p className={styles.videoCaption}>
-            Watch: why we built JFK Social — 2 minutes.
+            Watch: why we built JFK Social.
           </p>
         </div>
       </div>
