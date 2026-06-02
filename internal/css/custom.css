@@ -182,6 +182,12 @@ a:hover {
   transform: translateY(-1px);
 }
 
+/* Hide the external-link icon Docusaurus appends to these auth buttons. */
+.navbar__items--right .navbarLogin svg,
+.navbar__items--right .navbarSignUp svg {
+  display: none;
+}
+
 /* ---------- Footer ---------- */
 
 .footer {
