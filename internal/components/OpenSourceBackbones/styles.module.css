@@ -1,110 +1,161 @@
+/* =====================================================================
+   Open-Source Backbones — civic / editorial design
+   Pairs with /Users/bryan/BGit/act3/jfksocial-marketing/internal/css/custom.css
+   (uses --paper, --navy, --red, --serif, --brass tokens).
+   ===================================================================== */
+
+.section,
+.sectionAlt {
+  padding-block: clamp(72px, 11vw, 148px);
+  padding-inline: clamp(20px, 5vw, 56px);
+}
+
 .section {
-  padding: 6rem 5%;
-  background: #ffffff;
-  border-bottom: 1px solid var(--jfk-border);
+  background: var(--paper);
 }
 
 .sectionAlt {
-  padding: 6rem 5%;
-  background: var(--jfk-surface-2);
-  border-bottom: 1px solid var(--jfk-border);
+  background: var(--paper-3);
 }
 
 .inner {
-  max-width: 72rem;
-  margin: 0 auto;
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 20px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--red);
+  display: inline-block;
 }
 
 .headline {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin: 0 0 1.25rem;
-  color: var(--jfk-ink);
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(32px, 4.4vw, 56px);
+  line-height: 1.02;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
 }
 
 .lead {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: var(--jfk-muted);
-  margin: 0 0 2.5rem;
-  max-width: 52rem;
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 20px 0 0;
+  max-width: 60ch;
 }
 
 .grid {
+  margin-top: 56px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
 }
 
 .card {
-  background: #ffffff;
-  border: 1px solid var(--jfk-border);
-  border-radius: 14px;
-  padding: 1.75rem 1.75rem 1.5rem;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(26px, 2.6vw, 36px);
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 50px -34px rgba(8, 22, 40, 0.45);
 }
 
 .cardHeader {
   display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .cardTitle {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.1vw, 25px);
+  font-weight: 600;
+  color: var(--navy);
   margin: 0;
-  color: var(--jfk-ink);
+  letter-spacing: -0.01em;
 }
 
 .cardTag {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ifm-color-primary-dark);
-  background: rgba(79, 70, 229, 0.08);
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
+  color: var(--brass);
+  border: 1px solid rgba(168, 133, 76, 0.45);
+  border-radius: 3px;
+  padding: 4px 9px;
+  background: transparent;
+}
+
+.cardTagPrimary {
+  color: var(--red);
+  border-color: rgba(190, 57, 44, 0.4);
 }
 
 .cardBody {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--jfk-muted);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--muted);
   margin: 0;
 }
 
 .cardBody strong {
-  color: var(--jfk-ink);
+  color: var(--ink);
   font-weight: 600;
 }
 
 .footnote {
-  margin: 2.25rem 0 0;
-  font-size: 0.95rem;
+  margin: 30px 0 0;
+  padding: 22px 26px;
+  border-left: 3px solid var(--red);
+  background: var(--paper-3);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 15.5px;
   line-height: 1.6;
-  color: var(--jfk-muted);
-  max-width: 60rem;
+  max-width: 78ch;
 }
 
-@media screen and (max-width: 996px) {
-  .section,
-  .sectionAlt {
-    padding: 4rem 5%;
-  }
+.sectionAlt .footnote {
+  background: var(--paper);
+}
 
-  .headline {
-    font-size: 2rem;
-  }
+.footnote strong {
+  color: var(--ink);
+  font-weight: 600;
+}
 
+@media (max-width: 980px) {
   .grid {
     grid-template-columns: 1fr;
   }

@@ -1,18 +1,21 @@
 import type { ReactNode } from "react";
 import Heading from "@theme/Heading";
+import clsx from "clsx";
 
 import styles from "./styles.module.css";
 
 type Backbone = {
   title: string;
   tag: string;
+  primary?: boolean;
   body: ReactNode;
 };
 
 const BACKBONES: Backbone[] = [
   {
     title: "Nostr",
-    tag: "Primary backbone",
+    tag: "Primary Backbone",
+    primary: true,
     body: (
       <>
         The open protocol JFK Social runs on. Your identity is a
@@ -39,7 +42,7 @@ const BACKBONES: Backbone[] = [
   },
   {
     title: "ActivityPub (Threads)",
-    tag: "W3C standard",
+    tag: "W3C Standard",
     body: (
       <>
         The open W3C standard that Meta's Threads adopted for
@@ -67,19 +70,21 @@ const BACKBONES: Backbone[] = [
 
 type Props = {
   variant?: "default" | "alt";
+  eyebrow?: string;
   headline?: string;
   lead?: ReactNode;
 };
 
 export default function OpenSourceBackbones({
   variant = "default",
-  headline = "Open Source Social Media Backbones.",
+  eyebrow = "Open by design",
+  headline = "Open-source social media backbones.",
   lead = (
     <>
-      Four open protocols and networks anchor everything we build.
-      Your identity, your content, and your audience are not locked
-      to a single company — and they never will be. If we ever fail
-      you, you can leave with everything that matters.
+      Four open protocols and networks anchor everything we build. Your
+      identity, your content, and your audience are not locked to a single
+      company — and they never will be. If we ever fail you, you can leave
+      with everything that matters.
     </>
   ),
 }: Props): ReactNode {
@@ -88,6 +93,7 @@ export default function OpenSourceBackbones({
       className={variant === "alt" ? styles.sectionAlt : styles.section}
     >
       <div className={styles.inner}>
+        <span className={styles.eyebrow}>{eyebrow}</span>
         <Heading as="h2" className={styles.headline}>
           {headline}
         </Heading>
@@ -97,17 +103,24 @@ export default function OpenSourceBackbones({
             <div key={b.title} className={styles.card}>
               <div className={styles.cardHeader}>
                 <h3 className={styles.cardTitle}>{b.title}</h3>
-                <span className={styles.cardTag}>{b.tag}</span>
+                <span
+                  className={clsx(
+                    styles.cardTag,
+                    b.primary && styles.cardTagPrimary,
+                  )}
+                >
+                  {b.tag}
+                </span>
               </div>
               <p className={styles.cardBody}>{b.body}</p>
             </div>
           ))}
         </div>
         <p className={styles.footnote}>
-          <strong>Why this matters:</strong> walled-garden networks
-          can silence you by deleting your account. Open-protocol
-          networks cannot. Your keys, your followers, your content
-          are portable by design.
+          <strong>Why this matters:</strong> walled-garden networks can
+          silence you by deleting your account. Open-protocol networks
+          cannot. Your keys, your followers, your content are portable by
+          design.
         </p>
       </div>
     </section>

@@ -195,16 +195,18 @@
   mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
   -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
 }
-.hero .container {
-  position: relative;
-}
+/* Full-bleed grid: text keeps the centered-container left gutter, video runs
+   all the way to the window's right edge for a larger, magazine-bleed feel. */
 .heroGrid {
+  position: relative;
   display: grid;
-  grid-template-columns: 1.12fr 0.88fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
   gap: clamp(32px, 5vw, 64px);
   align-items: center;
   padding-top: clamp(40px, 7vw, 84px);
   padding-bottom: clamp(72px, 11vw, 148px);
+  padding-left: max(clamp(20px, 5vw, 56px), calc((100% - 1180px) / 2));
+  padding-right: 0;
 }
 
 .heroTag {
@@ -267,17 +269,19 @@
   flex: none;
 }
 
-/* Video frame */
+/* Video frame — extends to the right window edge.
+   Left corners rounded (magazine-bleed); right corners square. */
 .heroMedia {
   width: 100%;
 }
 .video {
   position: relative;
-  border-radius: 8px;
+  border-radius: 8px 0 0 8px;
   overflow: hidden;
   background: var(--navy-900);
   border: 1px solid var(--line);
-  box-shadow: 0 40px 80px -40px rgba(8, 22, 40, 0.5),
+  border-right: none;
+  box-shadow: -10px 40px 80px -40px rgba(8, 22, 40, 0.5),
     0 2px 0 rgba(255, 255, 255, 0.5);
 }
 .videoFrame {
@@ -299,6 +303,7 @@
   font-size: 15px;
   color: var(--muted);
   text-align: center;
+  padding-right: clamp(20px, 5vw, 56px);
 }
 
 /* =====================================================================
@@ -815,6 +820,17 @@
   .heroGrid {
     grid-template-columns: 1fr;
     gap: 44px;
+    padding-left: clamp(20px, 5vw, 56px);
+    padding-right: clamp(20px, 5vw, 56px);
+  }
+  .video {
+    border-radius: 8px;
+    border-right: 1px solid var(--line);
+    box-shadow: 0 40px 80px -40px rgba(8, 22, 40, 0.5),
+      0 2px 0 rgba(255, 255, 255, 0.5);
+  }
+  .videoCap {
+    padding-right: 0;
   }
   .stats {
     grid-template-columns: 1fr 1fr;

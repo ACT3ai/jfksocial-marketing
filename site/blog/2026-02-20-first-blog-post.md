@@ -7,7 +7,7 @@ tags: [nostr, decentralization]
 
 Centralized social media platforms have become the gatekeepers of online discourse. JFKSocial is our answer to that problem.
 
-<!-- truncate -->
+{/* truncate */}
 
 ## The Problem with Centralized Platforms
 

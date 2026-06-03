@@ -67,9 +67,8 @@ function Arrow() {
 function Hero() {
   return (
     <section className={styles.hero} id="hero">
-      <div className={styles.container}>
-        <div className={styles.heroGrid}>
-          <div className={styles.heroCopy}>
+      <div className={styles.heroGrid}>
+        <div className={styles.heroCopy}>
             <p className={clsx(styles.heroTag, styles.reveal)}>
               The social network for citizens who refuse to be silenced.
             </p>
@@ -124,7 +123,6 @@ function Hero() {
             </div>
             <p className={styles.videoCap}>Watch: why we built JFK Social.</p>
           </div>
-        </div>
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ tags: [jfksocial, nostr]
 
 Welcome to JFKSocial -- a new way to connect on the decentralized web.
 
-<!-- truncate -->
+{/* truncate */}
 
 We're building JFKSocial because we believe social media is broken. Centralized platforms control your identity, mine your data, and use algorithms to manipulate your attention. We think there's a better way.
 

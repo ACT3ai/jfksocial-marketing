@@ -7,7 +7,7 @@ tags: [nostr, decentralization]
 
 A technical look at how the Nostr protocol works and why it matters for the future of social media.
 
-<!-- truncate -->
+{/* truncate */}
 
 ## How Nostr Works
 
