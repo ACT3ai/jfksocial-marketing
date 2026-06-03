@@ -26,6 +26,25 @@ const config: Config = {
     locales: ["en"],
   },
 
+  headTags: [
+    {
+      tagName: "link",
+      attributes: { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossorigin: "anonymous",
+      },
+    },
+  ],
+
+  stylesheets: [
+    "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap",
+  ],
+
   plugins: [
     [
       "@docusaurus/plugin-content-docs",
@@ -75,6 +94,14 @@ const config: Config = {
       defaultMode: "light",
       disableSwitch: true,
       respectPrefersColorScheme: false,
+    },
+    announcementBar: {
+      id: "jfk-dateline",
+      content:
+        '<span class="jfkDateline"><span>Est. 2026</span><span class="jfkDatelineSep">★</span><span>Open-Protocol</span><span class="jfkDatelineSep">★</span><span>Censorship-Resistant</span><span class="jfkDatelineSep">★</span><span>Your Keys · Your Followers · Your Words</span></span>',
+      backgroundColor: "#081628",
+      textColor: "#A7B3C4",
+      isCloseable: false,
     },
     navbar: {
       title: "JFK Social",
