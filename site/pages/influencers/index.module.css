@@ -13,7 +13,7 @@
   padding-block: clamp(72px, 11vw, 148px);
 }
 .display {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 600;
   line-height: 1.02;
   letter-spacing: -0.018em;
@@ -144,7 +144,7 @@
 }
 
 .heroTag {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-style: italic;
   font-size: clamp(16px, 1.7vw, 20px);
   color: var(--navy);
@@ -166,7 +166,7 @@
   color: var(--ink);
 }
 .heroSub {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 500;
   font-style: italic;
   font-size: clamp(22px, 2.6vw, 32px);
@@ -210,7 +210,7 @@
 }
 .videoCap {
   margin: 14px 0 0;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-style: italic;
   font-size: 15px;
   color: var(--muted);
@@ -264,7 +264,7 @@
   border-bottom: 1px solid var(--line);
 }
 .articleNum {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(36px, 4.2vw, 52px);
   font-weight: 500;
   color: var(--red);
@@ -281,7 +281,7 @@
   margin-bottom: 8px;
 }
 .article h3 {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(21px, 2.3vw, 28px);
   font-weight: 600;
   color: var(--ink);
@@ -322,7 +322,7 @@
 }
 .stat:last-child { border-right: none; }
 .statVal {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 600;
   color: #fff;
   font-size: clamp(28px, 3vw, 40px);
@@ -396,7 +396,7 @@
   transform: translateY(2px);
 }
 .bullet strong {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(18px, 1.9vw, 22px);
   font-weight: 600;
   color: var(--ink);
@@ -445,7 +445,7 @@
   padding: 4px 9px;
 }
 .phaseTitle {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(20px, 2.1vw, 25px);
   font-weight: 600;
   color: var(--navy);

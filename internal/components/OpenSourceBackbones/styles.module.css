@@ -45,7 +45,7 @@
 }
 
 .headline {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 600;
   font-size: clamp(32px, 4.4vw, 56px);
   line-height: 1.02;
@@ -95,7 +95,7 @@
 }
 
 .cardTitle {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(20px, 2.1vw, 25px);
   font-weight: 600;
   color: var(--navy);
