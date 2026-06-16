@@ -82,7 +82,7 @@ function Hero() {
             <div className={clsx(styles.heroCta, styles.reveal, styles.d3)}>
               <Link
                 className={clsx(styles.btn, styles.btnSolid)}
-                href="https://jfksocial.com/create-account"
+                href="mailto:ContactUs@act3ai.com?subject=Influencer%20Program%20Application"
               >
                 Apply to the program <Arrow />
               </Link>
