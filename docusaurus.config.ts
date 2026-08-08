@@ -11,7 +11,7 @@ const config: Config = {
     v4: true,
   },
 
-  url: process.env.SITE_URL || "https://m.jfksocial.com",
+  url: process.env.SITE_URL || "https://m.wecitizens.social",
   baseUrl: process.env.BASE_URL || "/",
 
   organizationName: "ACT3ai",
