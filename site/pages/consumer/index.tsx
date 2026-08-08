@@ -67,7 +67,7 @@ const CHARTER = [
     h: "Free speech.",
     p: (
       <>
-        Lawful speech stays up. Every system on JFK Social — moderation,
+        Lawful speech stays up. Every system on WeCitizens Social — moderation,
         ranking, hosting, federation — is designed around the principle
         that you do not get silenced for unpopular views. No shadow-banning,
         demonetization, or de-platforming to keep regulators, advertisers,
@@ -79,7 +79,7 @@ const CHARTER = [
     h: "We grow your audience.",
     p: (
       <>
-        Other platforms throttle your reach. JFK Social is engineered to
+        Other platforms throttle your reach. WeCitizens Social is engineered to
         grow audiences that legacy platforms suppress — through ranked
         discovery, cross-network publishing with Post Global, trust-based
         discovery via Follow, and Hero broadcast amplification.
@@ -124,7 +124,7 @@ const CHARTER = [
       <>
         Built on Nostr, ActivityPub, Mastodon, and BlueSky (AT Protocol).
         Your identity, your content, and your social graph are not locked
-        to a single vendor. If JFK Social ever fails you, your keys, posts,
+        to a single vendor. If WeCitizens Social ever fails you, your keys, posts,
         and followers can move to another compatible network.
       </>
     ),
@@ -133,7 +133,7 @@ const CHARTER = [
     h: "Open content.",
     p: (
       <>
-        Content on JFK Social is open to be read, indexed, archived,
+        Content on WeCitizens Social is open to be read, indexed, archived,
         mirrored, cross-posted, and federated. We do not wall content off
         from the broader internet — we make it easier for your words to
         reach the largest possible authentic audience.
@@ -157,7 +157,7 @@ function Hero() {
               <span className={styles.red}>Heard again.</span>
             </h1>
             <p className={clsx(styles.lead, styles.heroLead, styles.reveal, styles.d2)}>
-              JFK Social exists to give a voice back to the people — and to
+              WeCitizens Social exists to give a voice back to the people — and to
               defend that voice against the forces that drown out organic
               speech everywhere else. Free speech, open algorithms, open
               code, open standards.
@@ -165,13 +165,13 @@ function Hero() {
             <div className={clsx(styles.heroCta, styles.reveal, styles.d3)}>
               <Link
                 className={clsx(styles.btn, styles.btnSolid)}
-                href="https://jfksocial.com/create-account"
+                href="https://wecitizens.social/create-account"
               >
                 Create your free account <Arrow />
               </Link>
               <Link
                 className={clsx(styles.btn, styles.btnOutline)}
-                href="https://jfksocial.com"
+                href="https://wecitizens.social"
               >
                 Browse (while logged out)
               </Link>
@@ -183,7 +183,7 @@ function Hero() {
               <div className={styles.videoFrame}>
                 <iframe
                   src="https://www.youtube.com/embed/-yWQrDJ-9kk"
-                  title="JFK Social — For Citizens"
+                  title="WeCitizens Social — For Citizens"
                   frameBorder={0}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -249,17 +249,29 @@ function CTA() {
         <div className={clsx(styles.ctaActions, styles.reveal, styles.d3)}>
           <Link
             className={clsx(styles.btn, styles.btnSolid, styles.onNavy)}
-            href="https://jfksocial.com/create-account"
+            href="https://wecitizens.social/create-account"
           >
             Create your free account <Arrow />
           </Link>
           <Link
             className={clsx(styles.btn, styles.btnOutline, styles.onNavy)}
-            href="https://jfksocial.com"
+            href="https://wecitizens.social"
           >
-            ▶&nbsp; See it live at jfksocial.com
+            ▶&nbsp; See the network live
           </Link>
         </div>
+        <p className={clsx(styles.lead, styles.reveal, styles.d3)}>
+          Speaking freely is the first half. The second half is{" "}
+          <a
+            href="https://wethecitizens.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            We The Citizens
+          </a>
+          , our sister platform where citizens turn what they've said into
+          laws, evidence, and decisions.
+        </p>
       </div>
     </section>
   );
@@ -269,8 +281,8 @@ export default function ConsumerOverview(): ReactNode {
   useScrollReveal();
   return (
     <Layout
-      title="For Citizens — JFK Social"
-      description="JFK Social is the social network for citizens who refuse to be silenced. Free speech, open algorithms, open code, open standards — seven promises to every citizen."
+      title="For Citizens — WeCitizens Social"
+      description="WeCitizens Social is the social network for citizens who refuse to be silenced. Free speech, open algorithms, open code, open standards — seven promises to every citizen."
     >
       <main>
         <Hero />

@@ -5,15 +5,15 @@ export default function NavbarLogo(): React.ReactElement {
   return (
     <Link
       to="/"
-      className="navbar__brand jfkBrand"
-      aria-label="JFK Social home"
+      className="navbar__brand wcBrand"
+      aria-label="WeCitizens Social home"
     >
-      <span className="jfkSeal" aria-hidden="true">
-        <span>JFK</span>
+      <span className="wcSeal" aria-hidden="true">
+        <span>WE</span>
       </span>
-      <span className="jfkBrandText">
-        <span className="jfkBrandName">JFK Social</span>
-        <span className="jfkBrandSub">The Free-Speech Network</span>
+      <span className="wcBrandText">
+        <span className="wcBrandName">WeCitizens Social</span>
+        <span className="wcBrandSub">The Free-Speech Network</span>
       </span>
     </Link>
   );

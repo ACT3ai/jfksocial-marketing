@@ -76,7 +76,7 @@ function Hero() {
             </p>
             <p className={clsx(styles.lead, styles.heroLead, styles.reveal, styles.d2)}>
               Your company can have a social network for the whole world to
-              use, like x.com — built on the open-source code behind JFK
+              use, like x.com — built on the open-source code behind WeCitizens
               Social. Fork it, brand it, host it. The economics, the
               creator program, the moderation stack — all of it ships in
               the box.
@@ -122,7 +122,7 @@ const CARDS = [
     title: "Direct subscription model",
     tag: "Revenue",
     primary: true,
-    body: "Premium plans, checkout, billing, and wallet ship with the code. Your platform earns from subscribers, not advertisers — the same economics that let JFK Social pay creators what incumbents structurally cannot.",
+    body: "Premium plans, checkout, billing, and wallet ship with the code. Your platform earns from subscribers, not advertisers — the same economics that let WeCitizens Social pay creators what incumbents structurally cannot.",
   },
   {
     title: "Influencer rev share, built in",
@@ -151,7 +151,7 @@ function WhatsIncluded() {
             A complete social network. Not just a starter kit.
           </h2>
           <p className={clsx(styles.lead, styles.reveal, styles.d2)}>
-            When you fork JFK Social you get the entire platform — feed,
+            When you fork WeCitizens Social you get the entire platform — feed,
             posts, profiles, follows, moderation, admin tools, and a
             production-grade monetization engine. Stand up your own brand,
             your own community, your own economics on day one.
@@ -284,7 +284,7 @@ function LaunchPath() {
             A proven path from beta to public launch.
           </h2>
           <p className={clsx(styles.lead, styles.reveal, styles.d2)}>
-            The same phased launch playbook used for JFK Social ships with
+            The same phased launch playbook used for WeCitizens Social ships with
             the open source. Fork it, adapt it to your brand, follow the
             script.
           </p>
@@ -329,6 +329,18 @@ function CTA() {
             ▶&nbsp; Deploy playbook
           </Link>
         </div>
+        <p className={clsx(styles.lead, styles.reveal, styles.d3)}>
+          Every network you stand up widens the same movement — the one
+          building at{" "}
+          <a
+            href="https://wethecitizens.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            We The Citizens
+          </a>
+          . Open code, open protocols, no single owner.
+        </p>
       </div>
     </section>
   );
@@ -339,7 +351,7 @@ export default function ForkOverview(): ReactNode {
   return (
     <Layout
       title="Your Social Network — Our Open Source Code"
-      description="Run your own social network on JFK Social's open source code. Premium subscriptions, influencer revenue share, attribution, and payouts all included."
+      description="Run your own social network on WeCitizens Social's open source code. Premium subscriptions, influencer revenue share, attribution, and payouts all included."
     >
       <main>
         <Hero />

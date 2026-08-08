@@ -1,5 +1,5 @@
 /**
- * JFK Social — civic / editorial design system.
+ * WeCitizens Social — civic / editorial design system.
  * Deep navy + warm flag-red on warm cream.
  * Display: Newsreader (editorial serif). UI/body: Public Sans.
  */
@@ -39,18 +39,18 @@
     "Helvetica Neue", Arial, sans-serif;
 
   /* Layout */
-  --jfk-maxw: 1180px;
+  --wc-maxw: 1180px;
 
   /* Legacy aliases kept for any docs/markdown pages still referencing them. */
-  --jfk-ink: var(--ink);
-  --jfk-ink-soft: var(--ink);
-  --jfk-muted: var(--muted);
-  --jfk-muted-soft: var(--muted-2);
-  --jfk-surface: var(--paper);
-  --jfk-surface-2: var(--paper-2);
-  --jfk-surface-3: var(--paper-3);
-  --jfk-border: var(--line);
-  --jfk-border-strong: var(--line);
+  --wc-ink: var(--ink);
+  --wc-ink-soft: var(--ink);
+  --wc-muted: var(--muted);
+  --wc-muted-soft: var(--muted-2);
+  --wc-surface: var(--paper);
+  --wc-surface-2: var(--paper-2);
+  --wc-surface-3: var(--paper-3);
+  --wc-border: var(--line);
+  --wc-border-strong: var(--line);
 
   /* Docusaurus brand variables (mapped to civic palette) */
   --ifm-color-primary: var(--red);
@@ -153,7 +153,7 @@ div[role="banner"][class*="announcementBar"] > div {
   text-align: center;
 }
 
-.jfkDateline {
+.wcDateline {
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
@@ -166,11 +166,11 @@ div[role="banner"][class*="announcementBar"] > div {
   color: var(--on-navy-mut);
 }
 
-.jfkDateline > span {
+.wcDateline > span {
   white-space: nowrap;
 }
 
-.jfkDatelineSep {
+.wcDatelineSep {
   color: var(--brass);
 }
 
@@ -201,13 +201,13 @@ html[data-theme="light"] .navbar:not(.navbar-sidebar--show) {
 
 /* Inner row to constrain to centered max-width. */
 .navbar__inner {
-  max-width: var(--jfk-maxw);
+  max-width: var(--wc-maxw);
   margin-inline: auto;
 }
 
 /* ---- Custom brand (swizzled Navbar/Logo) ---- */
 
-.jfkBrand {
+.wcBrand {
   display: inline-flex;
   align-items: center;
   gap: 13px;
@@ -215,11 +215,11 @@ html[data-theme="light"] .navbar:not(.navbar-sidebar--show) {
   padding: 0;
 }
 
-.jfkBrand:hover {
+.wcBrand:hover {
   text-decoration: none;
 }
 
-.jfkSeal {
+.wcSeal {
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -235,7 +235,7 @@ html[data-theme="light"] .navbar:not(.navbar-sidebar--show) {
   flex: none;
 }
 
-.jfkSeal > span {
+.wcSeal > span {
   font-family: var(--sans);
   font-weight: 600;
   font-size: 14px;
@@ -243,13 +243,13 @@ html[data-theme="light"] .navbar:not(.navbar-sidebar--show) {
   line-height: 1;
 }
 
-.jfkBrandText {
+.wcBrandText {
   display: inline-flex;
   flex-direction: column;
   line-height: 1;
 }
 
-.jfkBrandName {
+.wcBrandName {
   font-family: var(--sans);
   font-weight: 600;
   font-size: 22px;
@@ -258,7 +258,7 @@ html[data-theme="light"] .navbar:not(.navbar-sidebar--show) {
   line-height: 1;
 }
 
-.jfkBrandSub {
+.wcBrandSub {
   font-family: var(--sans);
   font-size: 10px;
   font-weight: 700;
@@ -459,10 +459,10 @@ a.footer__title--link:hover {
    ===================================================================== */
 
 @media (max-width: 720px) {
-  .jfkBrandSub {
+  .wcBrandSub {
     display: none;
   }
-  .jfkDateline {
+  .wcDateline {
     font-size: 10.5px;
     letter-spacing: 0.18em;
     gap: 4px 10px;

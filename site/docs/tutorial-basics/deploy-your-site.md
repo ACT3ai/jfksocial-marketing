@@ -12,7 +12,7 @@ Relays are servers that store and forward Nostr events. When you publish a note,
 
 ## Default Relays
 
-JFKSocial comes with a set of well-known public relays pre-configured. These provide good coverage for most users.
+WeCitizens Social comes with a set of well-known public relays pre-configured. These provide good coverage for most users.
 
 ## Adding Relays
 

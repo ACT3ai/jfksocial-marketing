@@ -78,20 +78,21 @@ function Hero() {
               <span className={styles.red}>Grow your audience.</span>
             </h1>
             <p className={clsx(styles.lead, styles.heroLead, styles.reveal, styles.d2)}>
-              JFK Social is a censorship-resistant social network built on open
-              standards. Your identity is yours. Your followers are yours. Your
-              words are not buried by an algorithm you can't see.
+              WeCitizens Social is a censorship-resistant network built on open
+              standards and owned by the people who post on it. Your identity is
+              yours. Your followers are yours. Your words are not buried by an
+              algorithm you can't see.
             </p>
             <div className={clsx(styles.heroCta, styles.reveal, styles.d3)}>
               <Link
                 className={clsx(styles.btn, styles.btnSolid)}
-                href="https://jfksocial.com/create-account"
+                href="https://wecitizens.social/create-account"
               >
                 Create your free account <Arrow />
               </Link>
               <Link
                 className={clsx(styles.btn, styles.btnOutline)}
-                href="https://jfksocial.com"
+                href="https://wecitizens.social"
               >
                 Browse (while logged out)
               </Link>
@@ -114,14 +115,14 @@ function Hero() {
               <div className={styles.videoFrame}>
                 <iframe
                   src="https://www.youtube.com/embed/-yWQrDJ-9kk"
-                  title="Why we built JFK Social: free speech on an open network."
+                  title="Why we built WeCitizens Social: free speech on an open network."
                   frameBorder={0}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />
               </div>
             </div>
-            <p className={styles.videoCap}>Watch: why we built JFK Social.</p>
+            <p className={styles.videoCap}>Watch: why we built WeCitizens Social.</p>
           </div>
       </div>
     </section>
@@ -169,7 +170,7 @@ function Problem() {
           ))}
         </div>
         <p className={clsx(styles.problemClose, styles.reveal)}>
-          That's why we built <span className={styles.red}>JFK Social.</span>
+          That's why we built <span className={styles.red}>WeCitizens Social.</span>
         </p>
       </div>
     </section>
@@ -182,15 +183,16 @@ function Quote() {
       <div className={styles.container}>
         <span className={clsx(styles.mark, styles.reveal)}>“</span>
         <blockquote className={clsx(styles.reveal, styles.d1)}>
-          Without debate, without criticism, no administration and no country
-          can succeed — and{" "}
-          <span className={styles.red}>no republic can survive.</span>
+          Whenever the people are well-informed,{" "}
+          <span className={styles.red}>
+            they can be trusted with their own government.
+          </span>
         </blockquote>
         <div className={clsx(styles.quoteCite, styles.reveal, styles.d2)}>
           <span className={styles.rule}></span>
-          <span className={styles.quoteName}>John F. Kennedy</span>
+          <span className={styles.quoteName}>Thomas Jefferson</span>
           <span className={styles.quoteSrc}>
-            American Newspaper Publishers Association · 1961
+            Letter to Richard Price · 1789
           </span>
         </div>
       </div>
@@ -343,22 +345,22 @@ function Backbones() {
       name: "Nostr",
       chip: "Primary Backbone",
       chipRed: true,
-      body: "The open protocol JFK Social runs on. Your identity is a cryptographic key pair you own — not a username we can revoke. Posts relay through a distributed network of relays, so no single company can silence the network. If JFK Social ever fails you, your keys, posts, and followers move to any other Nostr client unchanged.",
+      body: "The open protocol WeCitizens Social runs on. Your identity is a cryptographic key pair you own — not a username we can revoke. Posts relay through a distributed network of relays, so no single company can silence the network. If WeCitizens Social ever fails you, your keys, posts, and followers move to any other Nostr client unchanged.",
     },
     {
       name: "BlueSky (AT Protocol)",
       chip: "Federated",
-      body: "The protocol behind BlueSky, designed for portable accounts and pluggable algorithms. JFK Social interoperates with AT Protocol so audiences and content can flow between networks without lock-in. Algorithms are user-selectable rather than editorially imposed.",
+      body: "The protocol behind BlueSky, designed for portable accounts and pluggable algorithms. WeCitizens Social interoperates with AT Protocol so audiences and content can flow between networks without lock-in. Algorithms are user-selectable rather than editorially imposed.",
     },
     {
       name: "ActivityPub (Threads)",
       chip: "W3C Standard",
-      body: "The open W3C standard that Meta's Threads adopted for federation, alongside hundreds of independent servers. JFK Social speaks ActivityPub so your posts can reach Threads users and the wider fediverse — without giving Meta control of your identity, audience, or reach.",
+      body: "The open W3C standard that Meta's Threads adopted for federation, alongside hundreds of independent servers. WeCitizens Social speaks ActivityPub so your posts can reach Threads users and the wider fediverse — without giving Meta control of your identity, audience, or reach.",
     },
     {
       name: "Mastodon",
       chip: "Fediverse",
-      body: "The largest established federated network on the open internet, also built on ActivityPub. Mastodon proved that a non-corporate social network can scale to millions of active users. JFK Social plugs into that same federation, so your audience is not trapped on one company's servers.",
+      body: "The largest established federated network on the open internet, also built on ActivityPub. Mastodon proved that a non-corporate social network can scale to millions of active users. WeCitizens Social plugs into that same federation, so your audience is not trapped on one company's servers.",
     },
   ];
   return (
@@ -483,17 +485,29 @@ function CTA() {
         <div className={clsx(styles.ctaActions, styles.reveal, styles.d3)}>
           <Link
             className={clsx(styles.btn, styles.btnSolid, styles.onNavy)}
-            href="https://jfksocial.com/create-account"
+            href="https://wecitizens.social/create-account"
           >
             Create your free account <Arrow />
           </Link>
           <Link
             className={clsx(styles.btn, styles.btnOutline, styles.onNavy)}
-            href="https://jfksocial.com"
+            href="https://wecitizens.social"
           >
-            ▶&nbsp; See it live at jfksocial.com
+            ▶&nbsp; See the network live
           </Link>
         </div>
+        <p className={clsx(styles.lead, styles.reveal, styles.d3)}>
+          WeCitizens Social is the town square of{" "}
+          <a
+            href="https://wethecitizens.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            We The Citizens
+          </a>
+          {" "}— where citizens do the work of fixing what's broken. One
+          movement: speak here, build there.
+        </p>
         <div className={clsx(styles.ctaLinks, styles.reveal, styles.d3)}>
           <Link to="/consumer/license">License</Link>
           <span className={styles.ctaSep}>·</span>
@@ -518,7 +532,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Speak freely. Grow your audience."
-      description="JFK Social is a censorship-resistant social network built on open standards. Your identity is yours. Your followers are yours."
+      description="WeCitizens Social is a censorship-resistant social network built on open standards. Your identity is yours. Your followers are yours."
     >
       <main id="top">
         <Hero />

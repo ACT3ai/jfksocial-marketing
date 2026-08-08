@@ -1,11 +1,11 @@
 ---
 slug: why-decentralized-social
 title: Why Decentralized Social Media Matters
-authors: [jfksocial]
+authors: [wecitizens]
 tags: [nostr, decentralization]
 ---
 
-Centralized social media platforms have become the gatekeepers of online discourse. JFKSocial is our answer to that problem.
+Centralized social media platforms have become the gatekeepers of online discourse. WeCitizens Social is our answer to that problem.
 
 {/* truncate */}
 
@@ -23,6 +23,6 @@ Nostr flips this model on its head:
 
 ## Building for the Future
 
-With JFKSocial, we're building a client that makes decentralized social media accessible to everyone -- not just cypherpunks. Good UX shouldn't be exclusive to walled gardens.
+With WeCitizens Social, we're building a client that makes decentralized social media accessible to everyone -- not just cypherpunks. Good UX shouldn't be exclusive to walled gardens.
 
 Stay tuned for more updates on our progress.

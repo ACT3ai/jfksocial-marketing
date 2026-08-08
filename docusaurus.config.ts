@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "JFKSocial",
-  tagline: "Decentralized social media powered by Nostr",
+  title: "WeCitizens Social",
+  tagline: "The social network citizens own",
   favicon: "img/favicon.ico",
 
   future: {
@@ -96,17 +96,17 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     announcementBar: {
-      id: "jfk-dateline",
+      id: "wc-dateline",
       content:
-        '<span class="jfkDateline"><span>Est. 2026</span><span class="jfkDatelineSep">★</span><span>Open-Protocol</span><span class="jfkDatelineSep">★</span><span>Censorship-Resistant</span><span class="jfkDatelineSep">★</span><span>Your Keys · Your Followers · Your Words</span></span>',
+        '<span class="wcDateline"><span>Est. 2026</span><span class="wcDatelineSep">★</span><span>Open-Protocol</span><span class="wcDatelineSep">★</span><span>Censorship-Resistant</span><span class="wcDatelineSep">★</span><span>Your Keys · Your Followers · Your Words</span></span>',
       backgroundColor: "#081628",
       textColor: "#A7B3C4",
       isCloseable: false,
     },
     navbar: {
-      title: "JFK Social",
+      title: "WeCitizens Social",
       logo: {
-        alt: "JFK Social Logo",
+        alt: "WeCitizens Social Logo",
         src: "img/jfk-john-80.jpg",
       },
       items: [
@@ -121,13 +121,13 @@ const config: Config = {
           label: "Videos",
         },
         {
-          href: "https://jfksocial.com/login",
+          href: "https://wecitizens.social/login",
           label: "Log In",
           position: "right",
           className: "navbarLogin",
         },
         {
-          href: "https://jfksocial.com/create-account",
+          href: "https://wecitizens.social/create-account",
           label: "Sign Up",
           position: "right",
           className: "navbarSignUp",
@@ -156,6 +156,16 @@ const config: Config = {
           items: [
             { label: "Terms", to: "/fork/license" },
             { label: "Privacy", to: "/fork/privacy" },
+          ],
+        },
+        {
+          title: "The Movement",
+          items: [
+            { label: "We The Citizens", href: "https://wethecitizens.io" },
+            {
+              label: "Source code",
+              href: "https://github.com/ACT3ai/jfksocial_server",
+            },
           ],
         },
       ],

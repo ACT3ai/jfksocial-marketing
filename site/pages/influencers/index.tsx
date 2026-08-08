@@ -64,7 +64,7 @@ function Hero() {
         <div className={styles.heroGrid}>
           <div>
             <p className={clsx(styles.heroTag, styles.reveal)}>
-              JFK Social Influencer Program
+              WeCitizens Social Influencer Program
             </p>
             <h1 className={clsx(styles.display, styles.heroH1, styles.reveal, styles.d1)}>
               Earn <span className={styles.red}>40%.</span>
@@ -100,7 +100,7 @@ function Hero() {
               <div className={styles.videoFrame}>
                 <iframe
                   src="https://www.youtube.com/embed/-yWQrDJ-9kk"
-                  title="JFK Social — Influencer Program"
+                  title="WeCitizens Social — Influencer Program"
                   frameBorder={0}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -121,7 +121,7 @@ const STEPS = [
     p: (
       <>
         We issue you a personal Tracking Link and a landing page at{" "}
-        <code>jfksocial.com/i/[your-slug]</code>. Share it on your show,
+        <code>wecitizens.social/i/[your-slug]</code>. Share it on your show,
         your newsletter, your posts, your bio link — anywhere your audience
         already follows you.
       </>
@@ -265,7 +265,7 @@ function PayoutMath() {
 const REASONS = [
   {
     title: "Subscriptions, not ads.",
-    body: "JFK Social makes money when users pay us directly. There is no ad sales team to feed, no advertiser veto over creator speech, and no incentive to suppress audiences advertisers dislike.",
+    body: "WeCitizens Social makes money when users pay us directly. There is no ad sales team to feed, no advertiser veto over creator speech, and no incentive to suppress audiences advertisers dislike.",
   },
   {
     title: "The structural rate the incumbents can't match.",
@@ -281,7 +281,7 @@ const REASONS = [
   },
   {
     title: "You keep earning while they stay subscribed.",
-    body: "This is recurring revenue, not a one-time bounty. A referred user who stays on JFK Social for three years pays you for three years.",
+    body: "This is recurring revenue, not a one-time bounty. A referred user who stays on WeCitizens Social for three years pays you for three years.",
   },
 ];
 
@@ -393,6 +393,18 @@ function GettingStarted() {
           and the companion{" "}
           <Link to="/influencers/privacy">Privacy Policy</Link>.
         </p>
+        <p className={clsx(styles.phaseFoot, styles.reveal)}>
+          Your audience isn't only an audience here. WeCitizens Social is the
+          town square of{" "}
+          <a
+            href="https://wethecitizens.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            We The Citizens
+          </a>
+          , where the people who follow you also organize, draft, and decide.
+        </p>
       </div>
     </section>
   );
@@ -402,8 +414,8 @@ export default function InfluencersOverview(): ReactNode {
   useScrollReveal();
   return (
     <Layout
-      title="JFK Social Influencer Program — Earn 40% of Subscription Revenue"
-      description="Refer paying subscribers to JFK Social and earn 40% of net subscription revenue for as long as they stay subscribed. Permanent first-touch attribution, branded landing pages, monthly payouts."
+      title="WeCitizens Social Influencer Program — Earn 40% of Subscription Revenue"
+      description="Refer paying subscribers to WeCitizens Social and earn 40% of net subscription revenue for as long as they stay subscribed. Permanent first-touch attribution, branded landing pages, monthly payouts."
     >
       <main>
         <Hero />

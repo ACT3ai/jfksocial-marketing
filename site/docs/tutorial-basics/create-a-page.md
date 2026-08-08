@@ -8,7 +8,7 @@ Discover content and connect with people on the Nostr network.
 
 ## Following Users
 
-To follow someone on JFKSocial:
+To follow someone on WeCitizens Social:
 
 1. Find their profile by searching their npub or NIP-05 identifier
 2. Click the Follow button
@@ -18,7 +18,7 @@ Your follow list is portable -- it works across all Nostr clients.
 
 ## Feed Types
 
-JFKSocial provides several feed views:
+WeCitizens Social provides several feed views:
 
 - **Following** - Posts from people you follow, in chronological order
 - **Global** - All posts from your connected relays
@@ -26,4 +26,4 @@ JFKSocial provides several feed views:
 
 ## No Algorithms
 
-Unlike centralized platforms, JFKSocial shows you posts in chronological order. No algorithmic manipulation, no promoted content, no engagement farming. Just posts from real people you chose to follow.
+Unlike centralized platforms, WeCitizens Social shows you posts in chronological order. No algorithmic manipulation, no promoted content, no engagement farming. Just posts from real people you chose to follow.

@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Welcome to JFKSocial
+# Welcome to WeCitizens Social
 
-JFKSocial is a decentralized social media client built on the **Nostr protocol**. It gives you full ownership of your online identity and social connections.
+WeCitizens Social is a decentralized social media client built on the **Nostr protocol**. It gives you full ownership of your online identity and social connections.
 
 ## What is Nostr?
 
@@ -16,21 +16,21 @@ Nostr (Notes and Other Stuff Transmitted by Relays) is a simple, open protocol f
 - **Relays** - Servers that store and forward messages. You can connect to as many as you like, and switch between them freely.
 - **NIPs** - Nostr Implementation Possibilities define how clients and relays communicate. They ensure interoperability across the ecosystem.
 
-## Getting Started with JFKSocial
+## Getting Started with WeCitizens Social
 
 ### 1. Create or Import Your Keys
 
-If you're new to Nostr, JFKSocial will generate a key pair for you. If you already have a Nostr identity, you can import your existing private key (nsec).
+If you're new to Nostr, WeCitizens Social will generate a key pair for you. If you already have a Nostr identity, you can import your existing private key (nsec).
 
 ### 2. Connect to Relays
 
-JFKSocial comes with sensible default relays, but you can add, remove, or prioritize relays to customize your experience.
+WeCitizens Social comes with sensible default relays, but you can add, remove, or prioritize relays to customize your experience.
 
 ### 3. Start Posting
 
 Publish notes, follow other users, send encrypted DMs, and explore the decentralized social web.
 
-## Why JFKSocial?
+## Why WeCitizens Social?
 
 - **No censorship** - No central authority can silence you
 - **No algorithms** - See posts in chronological order from people you follow

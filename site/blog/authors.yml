@@ -1,8 +1,8 @@
-jfksocial:
-  name: JFKSocial Team
+wecitizens:
+  name: WeCitizens Social Team
   title: Core Team
-  url: https://jfksocial.com
-  image_url: https://jfksocial.com/static/img/logo.svg
+  url: https://wecitizens.social
+  image_url: https://m.wecitizens.social/img/logo.svg
   page: true
   socials:
-    x: jfksocial
+    x: wecitizens

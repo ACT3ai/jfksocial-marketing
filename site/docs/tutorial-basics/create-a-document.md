@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Publishing Notes
 
-Notes are the primary way to share content on JFKSocial.
+Notes are the primary way to share content on WeCitizens Social.
 
 ## Writing a Note
 
@@ -19,7 +19,7 @@ Compose your note in the text area at the top of your feed. Notes can contain:
 
 When you publish a note:
 
-1. JFKSocial creates a Nostr event (kind 1)
+1. WeCitizens Social creates a Nostr event (kind 1)
 2. The event is signed with your private key
 3. The signed event is sent to all your connected relays
 4. Other users connected to those relays can see your note

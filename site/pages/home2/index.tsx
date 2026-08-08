@@ -113,13 +113,13 @@ function HomepageHeader() {
             </span>
           </Heading>
           <p className={styles.heroLede}>
-            JFK Social is a censorship-resistant social network built on open
-            standards. Your identity is yours. Your followers are yours. Your
+            WeCitizens Social is a censorship-resistant network built on open
+            standards and owned by the people who post on it. Your identity is yours. Your followers are yours. Your
             words are not buried by an algorithm you can't see.
           </p>
           <div className={styles.heroCtaRow}>
             <a
-              href="https://jfksocial.com/create-account"
+              href="https://wecitizens.social/create-account"
               className={styles.heroCta}
               target="_blank"
               rel="noopener noreferrer"
@@ -128,7 +128,7 @@ function HomepageHeader() {
               <ArrowIcon />
             </a>
             <a
-              href="https://jfksocial.com"
+              href="https://wecitizens.social"
               className={styles.heroCtaSecondary}
               target="_blank"
               rel="noopener noreferrer"
@@ -155,14 +155,14 @@ function HomepageHeader() {
           <div className={styles.videoFrame}>
             <iframe
               src="https://www.youtube.com/embed/-yWQrDJ-9kk"
-              title="JFK Social — Free Speech, Open Source"
+              title="WeCitizens Social — Free Speech, Open Source"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
           </div>
           <p className={styles.videoCaption}>
-            Watch: why we built JFK Social.
+            Watch: why we built WeCitizens Social.
           </p>
         </div>
       </div>
@@ -185,7 +185,7 @@ function PainSection() {
           ))}
         </ul>
         <p className={styles.painPivot}>
-          That's why we built JFK Social.
+          That's why we built WeCitizens Social.
         </p>
       </div>
     </section>
@@ -314,9 +314,21 @@ function FinalCtaSection() {
           Two minutes to sign up. Your identity is a cryptographic key only
           you control. If we ever fail you, you take everything with you.
         </p>
+        <p className={styles.finalCtaBody}>
+          WeCitizens Social is the town square of{" "}
+          <a
+            href="https://wethecitizens.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            We The Citizens
+          </a>
+          {" "}— where citizens do the work of fixing what's broken. One
+          movement: speak here, build there.
+        </p>
         <div className={styles.finalCtaRow}>
           <a
-            href="https://jfksocial.com/create-account"
+            href="https://wecitizens.social/create-account"
             className={styles.heroCta}
             target="_blank"
             rel="noopener noreferrer"
@@ -325,13 +337,13 @@ function FinalCtaSection() {
             <ArrowIcon />
           </a>
           <a
-            href="https://jfksocial.com"
+            href="https://wecitizens.social"
             className={styles.finalCtaSecondary}
             target="_blank"
             rel="noopener noreferrer"
           >
             <PlayIcon />
-            See it live at jfksocial.com
+            See the network live
           </a>
         </div>
         <div className={styles.finalCtaPolicies}>
@@ -365,7 +377,7 @@ export default function Home2(): ReactNode {
   return (
     <Layout
       title="Speak Freely. Grow Your Audience."
-      description="JFK Social is a censorship-resistant social network built on Nostr. Free speech, transparent ranking, open code, open standards — seven promises to every citizen."
+      description="WeCitizens Social is a censorship-resistant social network built on Nostr. Free speech, transparent ranking, open code, open standards — seven promises to every citizen."
     >
       <HomepageHeader />
       <main>

@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # You're All Set
 
-Congratulations -- you now know the basics of using JFKSocial!
+Congratulations -- you now know the basics of using WeCitizens Social!
 
 ## What You've Learned
 
@@ -21,6 +21,6 @@ Congratulations -- you now know the basics of using JFKSocial!
 
 ## Join the Community
 
-The Nostr ecosystem is growing every day. By using JFKSocial, you're part of a movement toward truly open, censorship-resistant social media.
+The Nostr ecosystem is growing every day. By using WeCitizens Social, you're part of a movement toward truly open, censorship-resistant social media.
 
 Welcome aboard.

@@ -18,10 +18,10 @@ const BACKBONES: Backbone[] = [
     primary: true,
     body: (
       <>
-        The open protocol JFK Social runs on. Your identity is a
+        The open protocol WeCitizens Social runs on. Your identity is a
         cryptographic key pair you own — not a username we can revoke.
         Posts relay through a distributed network of relays, so no
-        single company can silence the network. If JFK Social ever
+        single company can silence the network. If WeCitizens Social ever
         fails you, your keys, posts, and followers move to any other
         Nostr client unchanged.
       </>
@@ -33,7 +33,7 @@ const BACKBONES: Backbone[] = [
     body: (
       <>
         The protocol behind BlueSky, designed for portable accounts
-        and pluggable algorithms. JFK Social interoperates with AT
+        and pluggable algorithms. WeCitizens Social interoperates with AT
         Protocol so audiences and content can flow between networks
         without lock-in. Algorithms are user-selectable rather than
         editorially imposed.
@@ -46,7 +46,7 @@ const BACKBONES: Backbone[] = [
     body: (
       <>
         The open W3C standard that Meta's Threads adopted for
-        federation, alongside hundreds of independent servers. JFK
+        federation, alongside hundreds of independent servers. WeCitizens
         Social speaks ActivityPub so your posts can reach Threads
         users and the wider fediverse — without giving Meta control
         of your identity, audience, or reach.
@@ -61,7 +61,7 @@ const BACKBONES: Backbone[] = [
         The largest established federated network on the open
         internet, also built on ActivityPub. Mastodon proved that a
         non-corporate social network can scale to millions of active
-        users. JFK Social plugs into that same federation, so your
+        users. WeCitizens Social plugs into that same federation, so your
         audience is not trapped on one company's servers.
       </>
     ),

@@ -3,10 +3,10 @@ nostr:
   permalink: /nostr
   description: Posts about the Nostr protocol
 
-jfksocial:
-  label: JFKSocial
-  permalink: /jfksocial
-  description: JFKSocial product updates and announcements
+wecitizens:
+  label: WeCitizens Social
+  permalink: /wecitizens
+  description: WeCitizens Social product updates and announcements
 
 decentralization:
   label: Decentralization

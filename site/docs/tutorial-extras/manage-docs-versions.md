@@ -12,7 +12,7 @@ NIP-05 verification maps an internet identifier (e.g., `alice@example.com`) to a
 
 ## How It Works
 
-1. You add a NIP-05 identifier to your JFKSocial profile (e.g., `you@yourdomain.com`)
+1. You add a NIP-05 identifier to your WeCitizens Social profile (e.g., `you@yourdomain.com`)
 2. Your domain serves a `.well-known/nostr.json` file that maps the name to your public key
 3. Other clients verify this by fetching the JSON file from your domain
 

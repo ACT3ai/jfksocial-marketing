@@ -12,10 +12,10 @@ Zaps (NIP-57) allow you to send Bitcoin payments (via the Lightning Network) to 
 
 ## Setting Up Zaps
 
-To receive zaps on JFKSocial:
+To receive zaps on WeCitizens Social:
 
 1. Set up a Lightning wallet that supports LNURL (e.g., Alby, Wallet of Satoshi)
-2. Add your Lightning address to your JFKSocial profile
+2. Add your Lightning address to your WeCitizens Social profile
 3. Other users can now zap your posts
 
 ## Sending Zaps
