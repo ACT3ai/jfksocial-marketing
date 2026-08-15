@@ -2,6 +2,18 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+// Single source of truth for the Level 2 areas and everything built from them.
+// The navbar and footer defined below are rendered by @theme/Layout, which wraps
+// every docs page, every blog post and every hand-written React page under
+// site/pages/, so editing internal/nav.ts changes the top bar and the footer on
+// every page of the site at once.
+import {
+  clientNavData,
+  footerColumns,
+  moreNavbarItem,
+  partyNavbarItems,
+} from "./internal/nav";
+
 const config: Config = {
   title: "WeCitizens Social",
   tagline: "The social network citizens own",
@@ -20,6 +32,12 @@ const config: Config = {
   onBrokenLinks: "throw",
 
   staticDirectories: ["site/static"],
+
+  // Node-side nav data the browser needs (the footer's clickable column titles).
+  // Read with useDocusaurusContext().siteConfig.customFields.
+  customFields: {
+    ...clientNavData(),
+  },
 
   i18n: {
     defaultLocale: "en",
@@ -120,6 +138,12 @@ const config: Config = {
           position: "left",
           label: "Videos",
         },
+        // The two partisan front doors — "We The Citizens R" over "Republicans",
+        // "We The Citizens D" over "Democrats". Each is a dropdown whose own
+        // label links to that area's overview.mdx.
+        ...partyNavbarItems(),
+        // "More ⌄" — every Level 2 area, each going to its overview.mdx.
+        moreNavbarItem(),
         {
           href: "https://wecitizens.social/login",
           label: "Log In",
@@ -136,39 +160,9 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      links: [
-        {
-          title: "Users (Citizens)",
-          items: [
-            { label: "Terms", to: "/consumer/license" },
-            { label: "Privacy", to: "/consumer/privacy" },
-          ],
-        },
-        {
-          title: "Influencers",
-          items: [
-            { label: "Terms", to: "/influencers/license" },
-            { label: "Privacy", to: "/influencers/privacy" },
-          ],
-        },
-        {
-          title: "Your Social Network",
-          items: [
-            { label: "Terms", to: "/fork/license" },
-            { label: "Privacy", to: "/fork/privacy" },
-          ],
-        },
-        {
-          title: "The Movement",
-          items: [
-            { label: "We The Citizens", href: "https://wethecitizens.io" },
-            {
-              label: "Source code",
-              href: "https://github.com/ACT3ai/jfksocial_server",
-            },
-          ],
-        },
-      ],
+      // Built from internal/nav.ts, the same data the navbar uses, so the two
+      // can never drift. Rendered by @theme/Layout on every page of the site.
+      links: footerColumns(),
       copyright: `Copyright © ${new Date().getFullYear()} ACT3 AI, Inc.`,
     },
     prism: {

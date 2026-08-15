@@ -3,6 +3,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import { ThemeClassNames } from "@docusaurus/theme-common";
 import LinkItem from "@theme/Footer/LinkItem";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 type FooterItem = {
   to?: string;
@@ -20,16 +21,19 @@ type FooterColumn = {
 };
 
 /**
- * Maps a footer column title to a destination route. Docusaurus's footer
- * schema does not allow a link target on the column header itself, so
- * the mapping lives here. Keep in sync with footer.links in
- * docusaurus.config.ts.
+ * Docusaurus's footer schema does not allow a link target on the column header
+ * itself. Rather than repeat the URLs here, the title → route map is built in
+ * internal/nav.ts from the same Level 2 registry that builds the columns, and
+ * handed to the browser through siteConfig.customFields. The footer therefore
+ * cannot drift from the top bar.
  */
-const COLUMN_TITLE_LINKS: Record<string, string> = {
-  "Users (Citizens)": "/",
-  Influencers: "/influencers",
-  "Your Social Network": "/fork",
-};
+function useColumnTitleLinks(): Record<string, string> {
+  const { siteConfig } = useDocusaurusContext();
+  return (siteConfig.customFields?.footerColumnLinks ?? {}) as Record<
+    string,
+    string
+  >;
+}
 
 function ColumnLinkItem({ item }: { item: FooterItem }) {
   return item.html ? (
@@ -45,10 +49,11 @@ function ColumnLinkItem({ item }: { item: FooterItem }) {
 }
 
 function ColumnTitle({ title }: { title?: string }) {
+  const columnTitleLinks = useColumnTitleLinks();
   if (!title) {
     return null;
   }
-  const target = COLUMN_TITLE_LINKS[title];
+  const target = columnTitleLinks[title];
   if (target) {
     return (
       <Link className="footer__title footer__title--link" to={target}>
