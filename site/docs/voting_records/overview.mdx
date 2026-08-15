@@ -1,10 +1,11 @@
 ---
 id: overview
 title: Voting Records
-sidebar_label: Overview
+sidebar_label: Voting Records
 sidebar_position: 1
-description: "How we read the public record of how someone voted — the source of the hardest numbers on the site."
+description: "How we read the public record of how somebody voted - the source of the hardest numbers on the site."
 ---
+
 
 # Voting Records
 
@@ -12,28 +13,46 @@ description: "How we read the public record of how someone voted — the source 
 **How do you know how they voted?**
 :::
 
-How we read the public record of how someone voted — the source of the hardest numbers on the site.
+There are two calculation engines in this product. One reasons over layered context to answer a single
+decision. **This is the other one — the one that hunts.**
 
-## What this area covers
+It goes and finds the public record: which enacted instrument carries a problem, which vehicle it rode
+inside, and how every member voted at every stage of it.
 
-- Where voting data comes from and how it is downloaded.
-- What counts as a vote, an authorship, and a block.
-- How a record becomes an award percentage.
-- Gaps and how they are shown rather than hidden..
+## What it produces
 
-## What it deliberately leaves to other areas
+For each problem in scope:
 
-- Assessment of people with no record — that is new_politicians and flamingo..
+* **The enacted-law record** — which instrument actually carries the harm.
+* **The roll-call record** — a table of how members voted, at each stage.
+* **Stage weighting** — because not all stages are equal, and a vote in committee is not a vote on the
+  floor.
+* **A per-problem and an overall figure** that fills the voting-record block on an elected
+  politician's page.
+* **Gaps** — everything the run could not establish, listed rather than silently averaged over.
+
+## The hard line this engine holds
+
+**A public fact and the movement's reading of it are different things, stored in different fields.**
+
+*How somebody voted* is a fact with a citation. *Whether that vote advanced or resisted the harm* is
+the movement's judgment — one explicit, reviewable field, set deliberately, and never allowed to hide
+inside what looks like raw data.
+
+Keeping them separate is what lets somebody accept our data while rejecting our reading, which is a
+thing a reader should always be able to do.
+
+## What a run may write
+
+Bounded on purpose, and every run leaves an output record naming what it touched. A calculation that
+can quietly rewrite the record it is calculating from is not evidence.
 
 ## Pages in this area
 
-- **Where the data comes from** — `where_the_data_comes_from.mdx`
-- **What counts as a vote** — `what_counts_as_a_vote.mdx`
-- **Blocked from a vote** — `blocked_from_a_vote.mdx`
-
-Pages marked above are planned for this area; this overview is the front page of
-**Voting Records** and stays the stable link target for the top bar, the "More" menu and
-the footer.
+- **[Where the data comes from](./where_the_data_comes_from.mdx)** — sources and provenance.
+- **[What counts as a vote](./what_counts_as_a_vote.mdx)** — votes, authorship, stages, vehicles.
+- **[Blocked from a vote](./blocked_from_a_vote.mdx)** — the act with the biggest effect and the
+  smallest trace.
 
 ## Where to go next
 

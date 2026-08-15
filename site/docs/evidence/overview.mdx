@@ -1,10 +1,11 @@
 ---
 id: overview
 title: Evidence
-sidebar_label: Overview
+sidebar_label: Evidence
 sidebar_position: 1
-description: "Pillar 4: deciding when a few links are missing on purpose — the answer to you cannot prove it so you cannot say it."
+description: "Pillar 4: deciding when a few links are missing on purpose."
 ---
+
 
 # Evidence
 
@@ -12,29 +13,58 @@ description: "Pillar 4: deciding when a few links are missing on purpose — the
 **What if the proof is deliberately withheld?**
 :::
 
-Pillar 4: deciding when a few links are missing on purpose — the answer to you cannot prove it so you cannot say it.
+This is the intellectual core of the product. Everything else is downstream of being allowed to reach a
+conclusion at all.
 
-## What this area covers
+## The deadlock this breaks
 
-- Chain-of-evidence records.
-- Explicit gap tracking (classified, suppressed, blocked).
-- Setting your own confidence threshold for action.
-- AI checking the chain from first principles.
-- Grading a source..
+1. Powerful actors do something wrong.
+2. A slice of the information is **classified**, sealed, or withheld — a gap that did not occur
+   naturally.
+3. Anyone who could recover it is **blocked**.
+4. Citizens holding 95% of the chain are **labelled** for saying so.
+5. The standard is set at **100%**.
+6. The missing links are **the ones being withheld**, by the people the conclusion is about.
 
-## What it deliberately leaves to other areas
+Permanent deadlock — and not by accident. It is the most efficient defence available, because it
+requires the accused to do nothing but wait.
 
-- Any claim about a living person without a source — never published, see open_data..
+## What the app does instead
+
+A **chain of links**, each either something you **have** or something you are **missing** — and every
+missing link carries a **reason**:
+
+```yaml
+- id: l1
+  statement: "The duty to produce exists in statute."
+  status: have
+  source: "https://…"
+  strength: 0.9
+- id: l2
+  statement: "The internal decision to withhold, and its stated basis."
+  status: missing
+  reason: classified        # classified | suppressed | blocked | unknown
+  strength: 0.0
+```
+
+Plus **your threshold** — the confidence at which you will act anyway — and a computed conclusion that
+states what is known, what is missing, and what follows.
+
+## Why the reason matters so much
+
+`classified` is not `unknown`. A gap somebody created is a different object from a gap nobody has
+filled, and treating them identically is exactly the error the deadlock depends on.
+
+## One shape, two homes
+
+The identical structure is used standalone, as a case of its own, and **inside every decision**. The
+reasoning does not change depending on where you happened to open it.
 
 ## Pages in this area
 
-- **Chain of evidence** — `chain_of_evidence.mdx`
-- **Naming the gaps** — `naming_the_gaps.mdx`
-- **Your confidence threshold** — `your_confidence_threshold.mdx`
-
-Pages marked above are planned for this area; this overview is the front page of
-**Evidence** and stays the stable link target for the top bar, the "More" menu and
-the footer.
+- **[Chain of evidence](./chain_of_evidence.mdx)** — links, strength, and sources.
+- **[Naming the gaps](./naming_the_gaps.mdx)** — the four reasons and why they are separate.
+- **[Your confidence threshold](./your_confidence_threshold.mdx)** — deciding in advance.
 
 ## Where to go next
 
