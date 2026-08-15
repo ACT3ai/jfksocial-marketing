@@ -128,15 +128,34 @@ const config: Config = {
         src: "img/jfk-john-80.jpg",
       },
       items: [
-        { to: "/consumer", label: "Users (Citizens)", position: "left" },
-        { to: "/influencers", label: "Influencers", position: "left" },
-        { to: "/fork", label: "Your Social Network", position: "left" },
+        // The four site links. `wcNavFoldable` lets CSS fold them into the
+        // "More" menu below 1380px, where the whole row no longer fits — the
+        // matching `wcMoreFolded` duplicates live in internal/nav.ts.
+        {
+          to: "/consumer",
+          label: "Users (Citizens)",
+          position: "left",
+          className: "wcNavFoldable",
+        },
+        {
+          to: "/influencers",
+          label: "Influencers",
+          position: "left",
+          className: "wcNavFoldable",
+        },
+        {
+          to: "/fork",
+          label: "Your Social Network",
+          position: "left",
+          className: "wcNavFoldable",
+        },
         {
           type: "docSidebar",
           docsPluginId: "videos",
           sidebarId: "videosSidebar",
           position: "left",
           label: "Videos",
+          className: "wcNavFoldable",
         },
         // The two partisan front doors — "We The Citizens R" over "Republicans",
         // "We The Citizens D" over "Democrats". Each is a dropdown whose own

@@ -143,23 +143,23 @@ const SUB_LABELS: Record<string, string> = {
   the_problem: "What is actually broken",
   the_movement: "Charter, pillars, and joining",
   how_it_works: "The core loop, end to end",
-  get_started: "Hosted, or on your own computer",
+  get_started: "Hosted, or on your computer",
   social_contract: "The yardstick we measure against",
   problems: "The ranked, sourced catalog",
   laws: "The four law libraries",
   problem_laws: "Enacted, and nobody asked us",
-  fix_laws: "From a named problem to real language",
-  good_bills: "Written, and waiting for a sponsor",
-  good_laws: "Passed, blocked, or never allowed a vote",
+  fix_laws: "From problem to bill text",
+  good_bills: "Written, waiting for a sponsor",
+  good_laws: "Passed, blocked, or never voted",
   politicians: "Awards earned, and the wall",
   legacy_politicians: "The people with a voting record",
-  new_politicians: "Worth electing, never been in office",
+  new_politicians: "Never been in office",
   monkey: "How much they broke it",
   llama: "How much they repaired it",
-  flamingo: "Everything outside the voting record",
+  flamingo: "Outside the voting record",
   voting_records: "How we know how they voted",
-  qualifications: "Sixteen rubrics, published in the open",
-  meritocracy: "Influence earned, with a hard ceiling",
+  qualifications: "Sixteen public rubrics",
+  meritocracy: "Earned, with a hard ceiling",
   decisions: "Record where you stand",
   values: "Your ethics, applied at scale",
   evidence: "Deciding when proof is withheld",
@@ -341,13 +341,49 @@ assertGroupsCoverCsv("footer", FOOTER_GROUPS);
  * ------------------------------------------------------------------ */
 
 /** A non-link heading rendered inside a dropdown menu. */
-function menuHeading(text: string) {
+function menuHeading(text: string, className = "wcMenuHeading") {
   return {
     type: "html" as const,
-    className: "wcMenuHeading",
+    className,
     value: `<span>${text}</span>`,
   };
 }
+
+/**
+ * The four site links that live in the top bar on a wide screen, repeated here
+ * so they stay reachable once CSS folds them out of the bar below 1380px.
+ * `wcMoreFolded` is the switch: hidden in the menu on wide screens, shown in the
+ * menu on narrow ones. See internal/css/custom.css → "Fitting the bar".
+ */
+const FOLDED_SITE_LINKS = [
+  menuHeading("This site", "wcMenuHeading wcMoreFolded"),
+  {
+    to: "/consumer",
+    label: "Users (Citizens)",
+    subLabel: "The network, for people who post",
+    className: "wcMenuLink wcMoreFolded",
+  },
+  {
+    to: "/influencers",
+    label: "Influencers",
+    subLabel: "Bring your audience with you",
+    className: "wcMenuLink wcMoreFolded",
+  },
+  {
+    to: "/fork",
+    label: "Your Social Network",
+    subLabel: "Run your own instance",
+    className: "wcMenuLink wcMoreFolded",
+  },
+  {
+    type: "docSidebar" as const,
+    docsPluginId: "videos",
+    sidebarId: "videosSidebar",
+    label: "Videos",
+    subLabel: "Watch how it works",
+    className: "wcMenuLink wcMoreFolded",
+  },
+];
 
 function menuLink(key: string) {
   const area = byKey(key);
@@ -409,6 +445,7 @@ export function moreNavbarItem() {
     position: "left" as const,
     className: "wcMoreNav",
     items: [
+      ...FOLDED_SITE_LINKS,
       menuHeading("Party front doors"),
       ...PARTIES.map((p) => ({
         to: overviewPath(p.key),
