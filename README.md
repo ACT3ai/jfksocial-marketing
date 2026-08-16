@@ -1,8 +1,10 @@
 # JFKSocial Marketing Website
 
-Marketing and documentation website for JFKSocial, a decentralized social media platform built on the [Nostr](https://nostr.com) protocol.
+Marketing and documentation website for JFKSocial, a decentralized social media platform built on the [Nostr](https://nostr.com) protocol. The public site is branded **WeCitizens Social** and is published at https://m.wecitizens.social.
 
 Built with [Docusaurus 3](https://docusaurus.io/).
+
+Repo: https://github.com/ACT3ai/docu_social_media
 
 ## Prerequisites
 
@@ -35,11 +37,22 @@ Generates static output in `build/`.
 ## Project Structure
 
 ```
-docs/           Documentation pages (User Guide, Advanced)
-blog/           Blog posts
-src/
-  components/   React components (HomepageFeatures)
+site/
+  docs/         Documentation pages
+  blog/         Blog posts
+  pages/        Standalone pages (homepage, consumer, influencers, fork, info)
+  videos/       Videos section (docs plugin instance)
+  static/       Logo, favicon, CNAME, and static assets
+internal/
+  components/   React components
   css/          Global styles and brand colors
-  pages/        Standalone pages (homepage, about)
-static/img/     Logo, favicon, and static assets
+  sidebars.ts   Sidebar config (plus sidebars-videos.ts)
+docusaurus.config.ts
+jfksocial_company.md  Symlink to the JFKSocial company/product overview doc
 ```
+
+## Related Source Code
+
+- Backend / Go server — https://github.com/ACT3ai/jfksocial_server
+- Frontend / React shell — https://github.com/ACT3ai/jfksocial_frontend
+- Devops / deployment — https://github.com/ACT3ai/jfksocial_devops

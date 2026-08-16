@@ -20,8 +20,8 @@
       transparent 65%
     ),
     linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  color: var(--jfk-ink);
-  border-bottom: 1px solid var(--jfk-border);
+  color: var(--wc-ink);
+  border-bottom: 1px solid var(--wc-border);
 }
 
 .heroGrid {
@@ -53,7 +53,7 @@
   letter-spacing: -0.028em;
   line-height: 1.02;
   margin: 0 0 1.5rem;
-  color: var(--jfk-ink);
+  color: var(--wc-ink);
 }
 
 .heroTitleAccent {
@@ -70,7 +70,7 @@
 .heroLede {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: var(--jfk-muted);
+  color: var(--wc-muted);
   margin: 0 0 2rem;
   max-width: 36rem;
 }
@@ -113,17 +113,17 @@
   padding: 0.95rem 1.35rem;
   border-radius: 999px;
   background: transparent;
-  color: var(--jfk-ink);
+  color: var(--wc-ink);
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid var(--jfk-border-strong);
+  border: 1px solid var(--wc-border-strong);
   transition: background 0.15s ease, border-color 0.15s ease,
     color 0.15s ease;
 }
 
 .heroCtaSecondary:hover {
-  background: var(--jfk-surface-2);
+  background: var(--wc-surface-2);
   border-color: var(--ifm-color-primary-light);
   color: var(--ifm-color-primary-dark);
   text-decoration: none;
@@ -151,7 +151,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--jfk-muted);
+  color: var(--wc-muted);
   font-size: 0.95rem;
   font-weight: 500;
   margin: 0;
@@ -178,7 +178,7 @@
   border-radius: 0;
   overflow: hidden;
   box-shadow: 0 25px 60px rgba(15, 23, 42, 0.18),
-    0 0 0 1px var(--jfk-border);
+    0 0 0 1px var(--wc-border);
   background: #000;
 }
 
@@ -192,7 +192,7 @@
 
 .videoCaption {
   margin: 0;
-  color: var(--jfk-muted);
+  color: var(--wc-muted);
   font-size: 0.9rem;
   text-align: center;
   font-style: italic;
@@ -202,7 +202,7 @@
 
 .painSection {
   padding: 5rem 5%;
-  background: var(--jfk-ink);
+  background: var(--wc-ink);
   color: #f1f5f9;
   border-bottom: 1px solid #0b1020;
 }
@@ -258,7 +258,7 @@
 .promisesSection {
   padding: 6rem 5%;
   background: #ffffff;
-  border-bottom: 1px solid var(--jfk-border);
+  border-bottom: 1px solid var(--wc-border);
 }
 
 .promisesInner {
@@ -272,13 +272,13 @@
   letter-spacing: -0.02em;
   line-height: 1.15;
   margin: 0 0 0.75rem;
-  color: var(--jfk-ink);
+  color: var(--wc-ink);
   text-align: center;
 }
 
 .sectionLead {
   font-size: 1.15rem;
-  color: var(--jfk-muted);
+  color: var(--wc-muted);
   line-height: 1.6;
   margin: 0 auto 3rem;
   max-width: 44rem;
@@ -295,8 +295,8 @@
 }
 
 .promiseCard {
-  background: var(--jfk-surface-2);
-  border: 1px solid var(--jfk-border);
+  background: var(--wc-surface-2);
+  border: 1px solid var(--wc-border);
   border-radius: 14px;
   padding: 1.75rem 1.5rem;
   display: flex;
@@ -330,14 +330,14 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0;
-  color: var(--jfk-ink);
+  color: var(--wc-ink);
   letter-spacing: -0.01em;
   line-height: 1.3;
 }
 
 .promiseBody {
   font-size: 1rem;
-  color: var(--jfk-muted);
+  color: var(--wc-muted);
   line-height: 1.55;
   margin: 0;
 }
@@ -375,8 +375,8 @@
 
 .proofSection {
   padding: 6rem 5%;
-  background: var(--jfk-surface-2);
-  border-bottom: 1px solid var(--jfk-border);
+  background: var(--wc-surface-2);
+  border-bottom: 1px solid var(--wc-border);
 }
 
 .proofInner {
@@ -392,7 +392,7 @@
 
 .proofCard {
   background: #ffffff;
-  border: 1px solid var(--jfk-border);
+  border: 1px solid var(--wc-border);
   border-radius: 12px;
   padding: 1.75rem 1.5rem;
   display: flex;
@@ -410,7 +410,7 @@
 
 .proofSub {
   font-size: 0.97rem;
-  color: var(--jfk-muted);
+  color: var(--wc-muted);
   line-height: 1.5;
   margin: 0;
 }
@@ -420,7 +420,7 @@
 .audienceSection {
   padding: 6rem 5%;
   background: #ffffff;
-  border-bottom: 1px solid var(--jfk-border);
+  border-bottom: 1px solid var(--wc-border);
 }
 
 .audienceInner {
@@ -436,8 +436,8 @@
 }
 
 .audienceCard {
-  background: var(--jfk-surface-2);
-  border: 1px solid var(--jfk-border);
+  background: var(--wc-surface-2);
+  border: 1px solid var(--wc-border);
   border-radius: 14px;
   padding: 2rem 1.75rem;
   display: flex;
@@ -474,7 +474,7 @@
 .audienceTitle {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--jfk-ink);
+  color: var(--wc-ink);
   margin: 0;
   letter-spacing: -0.01em;
   line-height: 1.25;
@@ -482,7 +482,7 @@
 
 .audienceBody {
   font-size: 1rem;
-  color: var(--jfk-muted);
+  color: var(--wc-muted);
   line-height: 1.55;
   margin: 0;
   flex-grow: 1;

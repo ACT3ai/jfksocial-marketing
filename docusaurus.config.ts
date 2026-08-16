@@ -15,7 +15,7 @@ const config: Config = {
   baseUrl: process.env.BASE_URL || "/",
 
   organizationName: "ACT3ai",
-  projectName: "jfksocial-marketing",
+  projectName: "docu_social_media",
 
   onBrokenLinks: "throw",
 
@@ -64,7 +64,7 @@ const config: Config = {
         docs: {
           path: "site/docs",
           sidebarPath: "./internal/sidebars.ts",
-          editUrl: "https://github.com/ACT3ai/jfksocial-marketing/tree/main/",
+          editUrl: "https://github.com/ACT3ai/docu_social_media/tree/main/",
         },
         blog: {
           path: "site/blog",
@@ -73,7 +73,7 @@ const config: Config = {
             type: ["rss", "atom"],
             xslt: true,
           },
-          editUrl: "https://github.com/ACT3ai/jfksocial-marketing/tree/main/",
+          editUrl: "https://github.com/ACT3ai/docu_social_media/tree/main/",
           onInlineTags: "warn",
           onInlineAuthors: "warn",
           onUntruncatedBlogPosts: "warn",
@@ -105,10 +105,6 @@ const config: Config = {
     },
     navbar: {
       title: "WeCitizens Social",
-      logo: {
-        alt: "WeCitizens Social Logo",
-        src: "img/jfk-john-80.jpg",
-      },
       items: [
         { to: "/consumer", label: "Users (Citizens)", position: "left" },
         { to: "/influencers", label: "Influencers", position: "left" },

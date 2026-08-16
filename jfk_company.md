@@ -1,1 +1,0 @@
-/Users/bryan/BGit/act3/Social_Network/jfk_company.md
