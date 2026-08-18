@@ -513,13 +513,7 @@ function CTA() {
           <span className={styles.ctaSep}>·</span>
           <Link to="/consumer/privacy">Privacy</Link>
           <span className={styles.ctaSep}>·</span>
-          <a
-            href="https://github.com/ACT3ai/jfksocial_server"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Source code on GitHub
-          </a>
+          <Link to="/fork">Source code</Link>
         </div>
       </div>
     </section>

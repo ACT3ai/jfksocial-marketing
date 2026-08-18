@@ -89,7 +89,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "img/jfksocial-social-card.jpg",
+    image: "img/wecitizens-social-card.jpg",
     colorMode: {
       defaultMode: "light",
       disableSwitch: true,
@@ -158,10 +158,7 @@ const config: Config = {
           title: "The Movement",
           items: [
             { label: "We The Citizens", href: "https://wethecitizens.io" },
-            {
-              label: "Source code",
-              href: "https://github.com/ACT3ai/jfksocial_server",
-            },
+            { label: "Source code", to: "/fork" },
           ],
         },
       ],

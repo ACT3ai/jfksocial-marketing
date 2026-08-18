@@ -84,9 +84,9 @@ function Hero() {
             <div className={clsx(styles.heroCta, styles.reveal, styles.d3)}>
               <Link
                 className={clsx(styles.btn, styles.btnSolid)}
-                href="https://github.com/ACT3ai/jfksocial_server"
+                href="mailto:contactus@act3ai.com?subject=WeCitizens%20source%20access"
               >
-                Fork the code <Arrow />
+                Request source access <Arrow />
               </Link>
               <Link
                 className={clsx(styles.btn, styles.btnOutline)}
@@ -312,21 +312,22 @@ function CTA() {
           Stand up your own social network.
         </h2>
         <p className={clsx(styles.lead, styles.reveal, styles.d2)}>
-          The code is open. The economics are built in. The playbook ships
-          with it. Fork the repo and deploy on AWS or your own hardware.
+          The code is source-available. The economics are built in. The
+          playbook ships with it. Request access, fork it, and deploy on AWS
+          or your own hardware.
         </p>
         <div className={clsx(styles.ctaActions, styles.reveal, styles.d3)}>
           <Link
             className={clsx(styles.btn, styles.btnSolid, styles.onNavy)}
-            href="https://github.com/ACT3ai/jfksocial_server"
+            href="mailto:contactus@act3ai.com?subject=WeCitizens%20source%20access"
           >
-            Fork on GitHub <Arrow />
+            Request source access <Arrow />
           </Link>
           <Link
             className={clsx(styles.btn, styles.btnOutline, styles.onNavy)}
-            href="https://github.com/ACT3ai/jfksocial_devops"
+            to="/fork/license"
           >
-            ▶&nbsp; Deploy playbook
+            Read the license
           </Link>
         </div>
         <p className={clsx(styles.lead, styles.reveal, styles.d3)}>
