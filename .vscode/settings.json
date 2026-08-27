@@ -1,3 +1,4 @@
 {
+  // Pinned so VS Code never has to auto-detect a package manager for this folder.
   "npm.packageManager": "npm"
 }
